@@ -2,12 +2,15 @@ package org.algorithm.java.hyunjong;
 
 import org.algorithm.java.hyunjong.Algorithm.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
+import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        아이디추천();
+        완주하지못한선수();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -24,5 +27,11 @@ public class Main {
         String new_id="=.=";
         신규아이디추천 third = new 신규아이디추천();
         third.solution(new_id);
+    }
+    private static void 완주하지못한선수(){
+        String[] participant={"mislav", "stanko", "mislav", "ana"};
+        String[] completion={"stanko", "ana", "mislav"};
+        완주하지못한선수 fourth = new 완주하지못한선수();
+        fourth.solution(participant,completion);
     }
 }
