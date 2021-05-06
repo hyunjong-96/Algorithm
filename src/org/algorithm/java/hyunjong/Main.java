@@ -1,17 +1,16 @@
 package org.algorithm.java.hyunjong;
 
-import org.algorithm.java.hyunjong.Algorithm.두개더뽑아서더하기;
+import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
+import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
-
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        모의고사();
+        체육복();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -39,5 +38,13 @@ public class Main {
         int[] answers = {1,3,2,4,2};
         모의고사 fifth = new 모의고사();
         fifth.solution(answers);
+    }
+
+    private static void 체육복(){
+        int n = 5;
+        int[] lost = {2,3,4};
+        int[] reserve = {2,5};
+        체육복 six = new 체육복();
+        System.out.print(six.solution(n,lost,reserve));
     }
 }

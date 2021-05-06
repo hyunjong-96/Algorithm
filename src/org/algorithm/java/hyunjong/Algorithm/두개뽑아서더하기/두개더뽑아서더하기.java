@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm;
+package org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,6 +15,7 @@ public class 두개더뽑아서더하기 {
                 }
             }
         }
+
         Collections.sort(list);
         int[] answer=new int[list.size()];
         for(int i=0;i<list.size();i++){
