@@ -1,8 +1,7 @@
 package org.algorithm.java.hyunjong.Algorithm.모의고사;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class 모의고사 {
     public int[] solution(int[] answers){
@@ -12,6 +11,9 @@ public class 모의고사 {
         int[] secondStudent = {2,1,2,3,2,4,2,5};
         int[] thirdStudent = {3,3,1,1,2,2,4,4,5,5};
         int[] cnt={0,0,0};
+
+        List<Integer> arr1 = Arrays.stream(thirdStudent).boxed().collect(Collectors.toList());
+        Collections.sort(arr1, Comparator.reverseOrder());  //array -> List
 
         for(int i =0;i<answers.length;i++){
             if(answers[i]==(firstStudent[i%5])) cnt[0]++;
