@@ -6,11 +6,12 @@ import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이�
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
+import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 
 public class Main {
 
     public static void main(String[] args) {
-        체육복();
+        키패드누르기();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -46,5 +47,12 @@ public class Main {
         int[] reserve = {2,5};
         체육복 six = new 체육복();
         System.out.print(six.solution(n,lost,reserve));
+    }
+
+    private static void 키패드누르기(){
+        int[] numbers = new int[] {7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2};
+        String hand = "left";
+        키패드누르기 seven = new 키패드누르기();
+        System.out.println(seven.solution(numbers,hand));
     }
 }
