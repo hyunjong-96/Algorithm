@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong;
 
+import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
@@ -11,7 +12,7 @@ import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르�
 public class Main {
 
     public static void main(String[] args) {
-        키패드누르기();
+        K번째수();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -54,5 +55,12 @@ public class Main {
         String hand = "left";
         키패드누르기 seven = new 키패드누르기();
         System.out.println(seven.solution(numbers,hand));
+    }
+
+    private static void K번째수(){
+        int[] array = {1,5,2,6,3,7,4};
+        int[][] commands = {{2,5,3},{4,4,1},{1,7,3}};
+        K번째 k번째 = new K번째();
+        System.out.println(k번째.solution(array,commands));
     }
 }
