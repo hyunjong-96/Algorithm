@@ -1,6 +1,7 @@
 package org.algorithm.java.hyunjong;
 
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
+import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
@@ -14,7 +15,7 @@ import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르�
 public class Main {
 
     public static void main(String[] args) {
-        예산();
+        lotto();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -77,5 +78,12 @@ public class Main {
         int budget = 10;
         예산 s = new 예산();
         System.out.println(s.solution(d,budget));
+    }
+
+    private static void lotto(){
+        int[] lottos = {45,4,35,20,3,9};
+        int[] win_nums = {20,9,3,45,4,35};
+        LottoMaxAndMin s = new LottoMaxAndMin();
+        s.solution(lottos,win_nums);
     }
 }
