@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong;
 
+import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
@@ -11,12 +12,12 @@ import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하�
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
-import org.algorithm.java.hyunjong.Algorithm.폰켓.폰켓몬;
+import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 
 public class Main {
 
     public static void main(String[] args) {
-        monster();
+        failRate();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -90,7 +91,14 @@ public class Main {
 
     private static void monster(){
         int[] nums = {3,3,3,2,2,2};
-        폰켓몬 s = new 폰켓몬();
+        PhoneMonster s = new PhoneMonster();
         System.out.println(s.solution(nums));
+    }
+
+    private static void failRate(){
+        int[] stages={2, 1, 2, 6, 2, 4, 3, 3};
+        int N = 5;
+        FailedRate s = new FailedRate();
+        System.out.println(s.solution(N,stages).toString());
     }
 }

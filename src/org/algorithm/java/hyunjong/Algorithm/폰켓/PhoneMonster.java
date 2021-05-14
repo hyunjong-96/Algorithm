@@ -3,7 +3,7 @@ package org.algorithm.java.hyunjong.Algorithm.폰켓;
 import java.util.ArrayList;
 import java.util.List;
 
-public class 폰켓몬 {
+public class PhoneMonster {
     public int solution(int[] nums){
         int answer=0;
         int monsterCount = (nums.length)/2;
