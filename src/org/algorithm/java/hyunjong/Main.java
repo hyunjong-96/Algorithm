@@ -4,6 +4,7 @@ import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
+import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
@@ -20,7 +21,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        MiunsPlusAdd();
+        TriadFlip();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -124,5 +125,11 @@ public class Main {
         boolean[] signs = {true,false,true};
         MiunsPlusAdd s = new MiunsPlusAdd();
         System.out.println(s.solution(absolutes,signs));
+    }
+
+    private static void TriadFlip(){
+        int n=45;
+        TriadFlip s = new TriadFlip();
+        System.out.println(s.solution(n));
     }
 }
