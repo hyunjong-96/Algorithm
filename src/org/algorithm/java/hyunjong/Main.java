@@ -11,6 +11,7 @@ import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이�
 import org.algorithm.java.hyunjong.Algorithm.약수개수덧셈.Divisor;
 import org.algorithm.java.hyunjong.Algorithm.예산.예산;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
+import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
@@ -19,7 +20,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        Divisor();
+        MiunsPlusAdd();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -116,5 +117,12 @@ public class Main {
         int right = 17;
         Divisor s = new Divisor();
         System.out.print(s.soilution(left,right));
+    }
+
+    private static void MiunsPlusAdd(){
+        int[] absolutes = {4,7,12};
+        boolean[] signs = {true,false,true};
+        MiunsPlusAdd s = new MiunsPlusAdd();
+        System.out.println(s.solution(absolutes,signs));
     }
 }
