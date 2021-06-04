@@ -1,12 +1,14 @@
 package org.algorithm.java.hyunjong;
 
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
+import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
+import org.algorithm.java.hyunjong.Algorithm.약수개수덧셈.Divisor;
 import org.algorithm.java.hyunjong.Algorithm.예산.예산;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
@@ -17,7 +19,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        failRate();
+        Divisor();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -100,5 +102,19 @@ public class Main {
         int N = 5;
         FailedRate s = new FailedRate();
         System.out.println(s.solution(N,stages).toString());
+    }
+
+    private static void Inners(){
+        int[] a = {1,2,3,4};
+        int[] b = {-3,-1,0,2};
+        내적 s = new 내적();
+        System.out.println(s.solution(a,b));
+    }
+
+    private static void Divisor(){
+        int left = 13;
+        int right = 17;
+        Divisor s = new Divisor();
+        System.out.print(s.soilution(left,right));
     }
 }
