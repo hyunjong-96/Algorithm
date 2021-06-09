@@ -1,9 +1,12 @@
 package org.algorithm.java.hyunjong;
 
+import java.util.Arrays;
+
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
+import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
@@ -22,7 +25,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        Year2016();
+        SecretMap();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -139,5 +142,13 @@ public class Main {
         int b = 7;
         year2016 s = new year2016();
         System.out.println(s.solution(a,b));
+    }
+
+    private static void SecretMap(){
+        int n = 6;
+        int[] arr1 = {46,33,33,22,31,50};
+        int[] arr2 = {27,56,19,14,14,10};
+        secretMap s = new secretMap();
+        System.out.println(Arrays.toString(s.solution(n, arr1, arr2)));
     }
 }
