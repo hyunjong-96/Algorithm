@@ -3,6 +3,7 @@ package org.algorithm.java.hyunjong;
 import java.util.Arrays;
 
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
+import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
@@ -26,7 +27,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        CenterWord();
+        Distinct();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -157,5 +158,11 @@ public class Main {
         String s = "abcd";
         CenterWord c = new CenterWord();
         System.out.println(c.solution(s));
+    }
+
+    private static void Distinct(){
+        int[] arr = {4,4,4,3,3};
+        Distinct s = new Distinct();
+        System.out.println(Arrays.toString(s.solution(arr)));
     }
 }
