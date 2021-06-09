@@ -2,6 +2,7 @@ package org.algorithm.java.hyunjong;
 
 import java.util.Arrays;
 
+import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
@@ -25,7 +26,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        SecretMap();
+        CenterWord();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -150,5 +151,11 @@ public class Main {
         int[] arr2 = {27,56,19,14,14,10};
         secretMap s = new secretMap();
         System.out.println(Arrays.toString(s.solution(n, arr1, arr2)));
+    }
+
+    private static void CenterWord(){
+        String s = "abcd";
+        CenterWord c = new CenterWord();
+        System.out.println(c.solution(s));
     }
 }
