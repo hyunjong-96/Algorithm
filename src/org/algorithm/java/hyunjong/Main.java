@@ -11,6 +11,7 @@ import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
+import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
@@ -30,7 +31,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        SumBetween();
+        StringSorted();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -187,5 +188,12 @@ public class Main {
         int b = 5;
         SumBetween s = new SumBetween();
         System.out.println(s.solution(a,b));
+    }
+
+    private static void StringSorted(){
+        String[] strings = {"abce","abcd","cdx"};
+        int n = 2;
+        StringSorted s = new StringSorted();
+        System.out.println(Arrays.toString(s.solution(strings,2)));
     }
 }
