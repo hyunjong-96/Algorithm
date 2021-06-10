@@ -11,6 +11,7 @@ import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
+import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
@@ -29,7 +30,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        DivideAndFallNumber();
+        SumBetween();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -179,5 +180,12 @@ public class Main {
         int divisor = 1;
         DivideAndFallNumber s = new DivideAndFallNumber();
         System.out.println(Arrays.toString(s.solution(arr, divisor)));
+    }
+
+    private static void SumBetween(){
+        int a = 3;
+        int b = 5;
+        SumBetween s = new SumBetween();
+        System.out.println(s.solution(a,b));
     }
 }
