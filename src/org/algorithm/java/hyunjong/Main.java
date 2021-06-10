@@ -3,6 +3,7 @@ package org.algorithm.java.hyunjong;
 import java.util.Arrays;
 
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
+import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
@@ -27,7 +28,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        Distinct();
+        DartGame();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -164,5 +165,11 @@ public class Main {
         int[] arr = {4,4,4,3,3};
         Distinct s = new Distinct();
         System.out.println(Arrays.toString(s.solution(arr)));
+    }
+
+    private static void DartGame(){
+        String dartResult = "1D2S#10S";
+        DartGame s = new DartGame();
+        System.out.println(s.solution(dartResult));
     }
 }
