@@ -17,6 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
+import org.algorithm.java.hyunjong.Algorithm.문자열압축.StringCompression;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
 import org.algorithm.java.hyunjong.Algorithm.약수개수덧셈.Divisor;
@@ -31,7 +32,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        StringSorted();
+        StringCompression();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -195,5 +196,11 @@ public class Main {
         int n = 2;
         StringSorted s = new StringSorted();
         System.out.println(Arrays.toString(s.solution(strings,2)));
+    }
+
+    private static void StringCompression(){
+        String s = "ababcdcdababcdcd";
+        StringCompression result = new StringCompression();
+        System.out.println(result.solution(s));
     }
 }
