@@ -10,7 +10,10 @@ import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
+import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
+import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
+import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
 import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
@@ -32,7 +35,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        StringCompression();
+        StringBasic();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -201,6 +204,24 @@ public class Main {
     private static void StringCompression(){
         String s = "ababcdcdababcdcd";
         StringCompression result = new StringCompression();
+        System.out.println(result.solution(s));
+    }
+
+    private static void StringCharCount(){
+        String s = "pPoooyY";
+        P_Y_Count result = new P_Y_Count();
+        System.out.println(result.solution(s));
+    }
+
+    private static void StringDescSort(){
+        String s = "Zbcdefg";
+        StringDesc result = new StringDesc();
+        System.out.println(result.solution(s));
+    }
+
+    private static void StringBasic(){
+        String s = "1234";
+        StringBasic result = new StringBasic();
         System.out.println(result.solution(s));
     }
 }
