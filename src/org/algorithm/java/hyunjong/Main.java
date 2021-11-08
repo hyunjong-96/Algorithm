@@ -7,6 +7,7 @@ import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
 import org.algorithm.java.hyunjong.Algorithm.DivideAndFallNumber.DivideAndFallNumber;
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
+import org.algorithm.java.hyunjong.Algorithm.Find김서방.FindKimInSeoul;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
@@ -32,10 +33,12 @@ import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레�
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 
+import sun.plugin.javascript.navig.Array;
+
 public class Main {
 
     public static void main(String[] args) {
-        StringBasic();
+        FindKim();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -222,6 +225,12 @@ public class Main {
     private static void StringBasic(){
         String s = "1234";
         StringBasic result = new StringBasic();
+        System.out.println(result.solution(s));
+    }
+
+    private static void FindKim(){
+        String[] s = new String[]{"Jane", "Kim"};
+        FindKimInSeoul result = new FindKimInSeoul();
         System.out.println(result.solution(s));
     }
 }
