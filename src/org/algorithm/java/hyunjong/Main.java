@@ -7,6 +7,7 @@ import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
 import org.algorithm.java.hyunjong.Algorithm.DivideAndFallNumber.DivideAndFallNumber;
 import org.algorithm.java.hyunjong.Algorithm.FailedRate.FailedRate;
+import org.algorithm.java.hyunjong.Algorithm.FindMinority.FindMinority;
 import org.algorithm.java.hyunjong.Algorithm.Find김서방.FindKimInSeoul;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
@@ -38,7 +39,7 @@ import sun.plugin.javascript.navig.Array;
 public class Main {
 
     public static void main(String[] args) {
-        FindKim();
+        FindMinority();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -231,6 +232,12 @@ public class Main {
     private static void FindKim(){
         String[] s = new String[]{"Jane", "Kim"};
         FindKimInSeoul result = new FindKimInSeoul();
+        System.out.println(result.solution(s));
+    }
+
+    private static void FindMinority(){
+        int s = 10;
+        FindMinority result = new FindMinority();
         System.out.println(result.solution(s));
     }
 }
