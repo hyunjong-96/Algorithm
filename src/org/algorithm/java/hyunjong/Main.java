@@ -17,6 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
 import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
 import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
 import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
+import org.algorithm.java.hyunjong.Algorithm.StringToInteger.StringToInteger;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
@@ -40,7 +41,7 @@ import sun.plugin.javascript.navig.Array;
 public class Main {
 
     public static void main(String[] args) {
-        수박수박수();
+        문자열을_숫자로();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -245,6 +246,12 @@ public class Main {
     private static void 수박수박수(){
         int s = 3;
         수박수박수 result = new 수박수박수();
+        System.out.println(result.solution(s));
+    }
+
+    private static void 문자열을_숫자로(){
+        String s = "1234";
+        StringToInteger result = new StringToInteger();
         System.out.println(result.solution(s));
     }
 }
