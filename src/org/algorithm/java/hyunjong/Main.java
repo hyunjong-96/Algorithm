@@ -24,6 +24,7 @@ import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더�
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.문자열압축.StringCompression;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
+import org.algorithm.java.hyunjong.Algorithm.수박수박수.수박수박수;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
 import org.algorithm.java.hyunjong.Algorithm.약수개수덧셈.Divisor;
 import org.algorithm.java.hyunjong.Algorithm.예산.예산;
@@ -39,7 +40,7 @@ import sun.plugin.javascript.navig.Array;
 public class Main {
 
     public static void main(String[] args) {
-        FindMinority();
+        수박수박수();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -238,6 +239,12 @@ public class Main {
     private static void FindMinority(){
         int s = 10;
         FindMinority result = new FindMinority();
+        System.out.println(result.solution(s));
+    }
+
+    private static void 수박수박수(){
+        int s = 3;
+        수박수박수 result = new 수박수박수();
         System.out.println(result.solution(s));
     }
 }
