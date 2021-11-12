@@ -18,6 +18,7 @@ import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
 import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
 import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
 import org.algorithm.java.hyunjong.Algorithm.StringToInteger.StringToInteger;
+import org.algorithm.java.hyunjong.Algorithm.StringToInteger.진훈코딩;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
@@ -26,6 +27,7 @@ import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
 import org.algorithm.java.hyunjong.Algorithm.문자열압축.StringCompression;
 import org.algorithm.java.hyunjong.Algorithm.소수만들기.소수만들기;
 import org.algorithm.java.hyunjong.Algorithm.수박수박수.수박수박수;
+import org.algorithm.java.hyunjong.Algorithm.시저암호.시저암호;
 import org.algorithm.java.hyunjong.Algorithm.신규아이디추천.신규아이디추천;
 import org.algorithm.java.hyunjong.Algorithm.약수개수덧셈.Divisor;
 import org.algorithm.java.hyunjong.Algorithm.예산.예산;
@@ -41,7 +43,7 @@ import sun.plugin.javascript.navig.Array;
 public class Main {
 
     public static void main(String[] args) {
-        문자열을_숫자로();
+        시저암호();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -252,6 +254,19 @@ public class Main {
     private static void 문자열을_숫자로(){
         String s = "1234";
         StringToInteger result = new StringToInteger();
+        System.out.println(result.solution(s));
+    }
+
+    private static void 시저암호(){
+        String s = "a B z";
+        int n = 4;
+        시저암호 result = new 시저암호();
+        System.out.println(result.solution(s,n));
+    }
+
+    private static void 진훈코딩(){
+        String s = "-1234";
+        진훈코딩 result = new 진훈코딩();
         System.out.println(result.solution(s));
     }
 }
