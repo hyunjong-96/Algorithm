@@ -11,6 +11,8 @@ import org.algorithm.java.hyunjong.Algorithm.FindMinority.FindMinority;
 import org.algorithm.java.hyunjong.Algorithm.Find김서방.FindKimInSeoul;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
+import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_Node;
+import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_One_Way;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
@@ -18,7 +20,6 @@ import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
 import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
 import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
 import org.algorithm.java.hyunjong.Algorithm.StringToInteger.StringToInteger;
-import org.algorithm.java.hyunjong.Algorithm.StringToInteger.진훈코딩;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
@@ -38,12 +39,10 @@ import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레�
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 
-import sun.plugin.javascript.navig.Array;
-
 public class Main {
 
     public static void main(String[] args) {
-        시저암호();
+        linkedListNode();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -264,9 +263,26 @@ public class Main {
         System.out.println(result.solution(s,n));
     }
 
-    private static void 진훈코딩(){
-        String s = "-1234";
-        진훈코딩 result = new 진훈코딩();
-        System.out.println(result.solution(s));
+    private static void linkedList_oneWay(){
+        Linked_List_One_Way head = new Linked_List_One_Way(1);
+        head.append(2);
+        head.append(3);
+        head.append(4);
+        head.retrieve();
+        // head.delete(2);
+        // head.delete(3);
+        head.delete(1);
+        head.retrieve();
+    }
+
+    private static void linkedListNode(){
+        Linked_List_Node ll = new Linked_List_Node();
+        ll.append(1);
+        ll.append(2);
+        ll.append(3);
+        ll.append(4);
+        ll.retrieve();
+        ll.delete(1);
+        ll.retrieve();
     }
 }
