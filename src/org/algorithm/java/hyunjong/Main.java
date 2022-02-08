@@ -12,6 +12,7 @@ import org.algorithm.java.hyunjong.Algorithm.Find김서방.FindKimInSeoul;
 import org.algorithm.java.hyunjong.Algorithm.Internal.내적;
 import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_Node;
+import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_Node_Duplicate;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_One_Way;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
@@ -42,7 +43,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        linkedListNode();
+        linkedListNodeDuplicate();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -284,5 +285,20 @@ public class Main {
         ll.retrieve();
         ll.delete(1);
         ll.retrieve();
+    }
+
+    private static void linkedListNodeDuplicate(){
+        Linked_List_Node_Duplicate llnp = new Linked_List_Node_Duplicate();
+
+        llnp.append(1);
+        llnp.append(2);
+        llnp.append(2);
+        llnp.append(3);
+        llnp.append(4);
+        llnp.append(3);
+        llnp.retrieve();
+        llnp.duplicateDelete_with_buffer();
+        llnp.duplicateDelete_with_out_buffer();
+        llnp.retrieve();
     }
 }
