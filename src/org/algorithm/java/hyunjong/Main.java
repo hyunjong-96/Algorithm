@@ -14,6 +14,7 @@ import org.algorithm.java.hyunjong.Algorithm.K번째.K번째;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_Node;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_Node_Duplicate;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_One_Way;
+import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_select_index_from_end;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
@@ -43,7 +44,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        linkedListNodeDuplicate();
+        linedListNode_Select_Index_From_End();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -300,5 +301,15 @@ public class Main {
         llnp.duplicateDelete_with_buffer();
         llnp.duplicateDelete_with_out_buffer();
         llnp.retrieve();
+    }
+
+    private static void linedListNode_Select_Index_From_End(){
+        Linked_List_select_index_from_end ll = new Linked_List_select_index_from_end();
+
+        ll.append(1);
+        ll.append(1);
+        ll.append(3);
+        ll.append(1);
+        ll.KthToLast(3);
     }
 }
