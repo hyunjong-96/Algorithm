@@ -1,7 +1,10 @@
 package org.algorithm.java.hyunjong.Algorithm.LinkedList;
 
+import java.lang.ref.Reference;
+
 public class LinkedListNode {
 	Node header = new Node();
+	NodeReference nr;
 
 	public class Node {
 		int data;
@@ -48,25 +51,61 @@ public class LinkedListNode {
 
 	//뒤에서 k번째에 있는 노드의 data를 찾음
 	public void KthToLast(Node first, int k) {
-		Node node = first;
-		int length = 0;
+		// Node node = first;
+		// int length = 0;
+		//
+		// if(first.next != null){
+		// 	while (node.next != null) {
+		// 		length++;
+		// 		node = node.next;
+		// 	}
+		//
+		// 	if (length > 0) {
+		// 		length++;
+		// 	}
+		//
+		// 	node = first;
+		// 	for (int i = 0; i < length - k; i++) {
+		// 		node = node.next;
+		// 	}
+		// }
+		//
+		// System.out.println("뒤에서 " + k + "째 node의 값은 " + node.data);
 
-		if(first.next != null){
-			while (node.next != null) {
-				length++;
-				node = node.next;
-			}
+		nr = new NodeReference();
+		Node foundNode = findNode(first.next, k);
 
-			if (length > 0) {
-				length++;
-			}
+		if (foundNode == null) {
+			System.out.println("길이가 0 ");
+		} else {
+			System.out.println("찾은 node의 data : " + foundNode.data);
+		}
+	}
 
-			node = first;
-			for (int i = 0; i < length - k; i++) {
-				node = node.next;
-			}
+	private Node findNode(Node n, int k) {
+		if (n == null) {
+			return null;
 		}
 
-		System.out.println("뒤에서 " + k + "째 node의 값은 " + node.data);
+		Node found = findNode(n.next, k);
+
+		if (nr.count == k) {
+			found = n;
+		} else {
+			nr.plusCount();
+		}
+
+		return found;
+	}
+
+	private class NodeReference {
+		int count;
+
+		public NodeReference() {
+		}
+
+		public void plusCount() {
+			this.count++;
+		}
 	}
 }
