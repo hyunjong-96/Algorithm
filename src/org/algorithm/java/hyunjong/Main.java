@@ -306,10 +306,13 @@ public class Main {
     private static void linedListNode_Select_Index_From_End(){
         Linked_List_select_index_from_end ll = new Linked_List_select_index_from_end();
 
-        // ll.append(1);
-        // ll.append(1);
-        // ll.append(3);
-        // ll.append(1);
-        ll.KthToLast(3);
+        ll.append(1);
+        ll.append(1);
+        ll.append(3);
+        ll.append(1);
+        // ll.KthToLast(3);
+        ll.retrieve();
+        ll.deleteSomethingNode(ll.get(2));
+        ll.retrieve();
     }
 }

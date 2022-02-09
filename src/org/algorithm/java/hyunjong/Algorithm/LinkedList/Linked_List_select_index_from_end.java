@@ -19,6 +19,10 @@ public class Linked_List_select_index_from_end extends LinkedListNode{
 		node.retrieve();
 	}
 
+	public Node get(int k){
+		return node.get(k);
+	}
+
 	public void KthToLast(int k){
 		super.KthToLast(node.header,k);
 	}

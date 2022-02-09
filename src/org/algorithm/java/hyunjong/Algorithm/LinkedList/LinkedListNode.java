@@ -1,7 +1,5 @@
 package org.algorithm.java.hyunjong.Algorithm.LinkedList;
 
-import java.lang.ref.Reference;
-
 public class LinkedListNode {
 	Node header = new Node();
 	NodeReference nr;
@@ -106,6 +104,28 @@ public class LinkedListNode {
 
 		public void plusCount() {
 			this.count++;
+		}
+	}
+
+	public Node get(int k) {
+		Node n = header;
+		int index = 0;
+		while (n != null) {
+			if (index == k) {
+				return n;
+			} else {
+				n = n.next;
+				index++;
+			}
+		}
+		return null;
+	}
+
+	//어떤 노드를 삭제하려고 할때, 첫번째 노드를 모르고, Node를 삭제
+	public void deleteSomethingNode(Node n) {
+		if (n != null && n.next != null) {
+			n.data = n.next.data;
+			n.next = n.next.next;
 		}
 	}
 }
