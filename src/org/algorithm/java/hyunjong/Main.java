@@ -17,7 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_One_Way;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_select_index_from_end;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
-import org.algorithm.java.hyunjong.Algorithm.Queue.Queue;
+import org.algorithm.java.hyunjong.Algorithm.Queue.QueueByStack;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
 import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
 import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
@@ -26,6 +26,7 @@ import org.algorithm.java.hyunjong.Algorithm.StringToInteger.StringToInteger;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
+import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
@@ -46,7 +47,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        my_queue();
+        sortStack();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -336,7 +337,9 @@ public class Main {
     }
 
     private static void my_queue(){
-        Queue<Integer> myQueue = new Queue<>();
+        // Queue<Integer> myQueue = new Queue<>();
+        //
+        QueueByStack<Integer> myQueue = new QueueByStack<>();
 
         myQueue.add(1);
         myQueue.add(2);
@@ -351,5 +354,14 @@ public class Main {
         System.out.println(myQueue.remove());//4
         System.out.println(myQueue.isEmpty());//true
         System.out.println(myQueue.peek());//npe
+    }
+
+    private static void sortStack(){
+        StackSort stackSort = new StackSort(new int[] {3,5,1,6});
+        stackSort.sort();
+        Stack<Integer> result = stackSort.getSort();
+        while (!result.isEmpty()){
+            System.out.println(result.pop());
+        }
     }
 }
