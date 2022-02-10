@@ -34,4 +34,12 @@ public class AnimalShelter {
 
 		return dog.getOrder() < cat.getOrder() ? dogs.poll() : cats.poll();
 	}
+
+	public Animal parcelOutDog(){
+		return dogs.poll();
+	}
+
+	public Animal parcelOutCat(){
+		return cats.poll();
+	}
 }

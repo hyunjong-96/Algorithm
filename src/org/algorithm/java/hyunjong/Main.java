@@ -383,11 +383,17 @@ public class Main {
 		Cat cat1 = new Cat("고양이1");
 		Cat cat2 = new Cat("고양이2");
 
+		animalShelter.saveAnimal(cat1);
 		animalShelter.saveAnimal(dog1);
 		animalShelter.saveAnimal(dog2);
-		animalShelter.saveAnimal(cat1);
 		animalShelter.saveAnimal(dog3);
 		animalShelter.saveAnimal(cat2);
+
+		Animal parcelOutDog1 = animalShelter.parcelOutDog();
+		Animal parcelOutDog2 = animalShelter.parcelOutDog();
+		System.out.println("강아지 입양1 : "+parcelOutDog1.getName() + " / order : "+parcelOutDog1.getOrder());
+		System.out.println("강아지 입양1 : "+parcelOutDog2.getName() + " / order : "+parcelOutDog2.getOrder());
+
 
 		for (int i = 6; i > 0; i--) {
 			Animal animal = animalShelter.parcelOut();
