@@ -17,6 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_One_Way;
 import org.algorithm.java.hyunjong.Algorithm.LinkedList.Linked_List_select_index_from_end;
 import org.algorithm.java.hyunjong.Algorithm.LottoMaxAndMin.LottoMaxAndMin;
 import org.algorithm.java.hyunjong.Algorithm.PandYCount.P_Y_Count;
+import org.algorithm.java.hyunjong.Algorithm.Queue.Queue;
 import org.algorithm.java.hyunjong.Algorithm.SecretMap.secretMap;
 import org.algorithm.java.hyunjong.Algorithm.StringBasic.StringBasic;
 import org.algorithm.java.hyunjong.Algorithm.StringDESC.StringDesc;
@@ -45,7 +46,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        my_stack();
+        my_queue();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -332,5 +333,23 @@ public class Main {
         myStack.pop();
         System.out.println(myStack.isEmpty());//true
         myStack.pop();
+    }
+
+    private static void my_queue(){
+        Queue<Integer> myQueue = new Queue<>();
+
+        myQueue.add(1);
+        myQueue.add(2);
+        myQueue.add(3);
+        myQueue.add(4);
+        myQueue.peek();
+        System.out.println(myQueue.isEmpty());//false
+        System.out.println(myQueue.remove());//1
+        System.out.println(myQueue.peek());//2
+        System.out.println(myQueue.remove());//2
+        System.out.println(myQueue.remove());//3
+        System.out.println(myQueue.remove());//4
+        System.out.println(myQueue.isEmpty());//true
+        System.out.println(myQueue.peek());//npe
     }
 }
