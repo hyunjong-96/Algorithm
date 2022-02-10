@@ -24,6 +24,7 @@ import org.algorithm.java.hyunjong.Algorithm.StringSorted.StringSorted;
 import org.algorithm.java.hyunjong.Algorithm.StringToInteger.StringToInteger;
 import org.algorithm.java.hyunjong.Algorithm.SumBetween.SumBetween;
 import org.algorithm.java.hyunjong.Algorithm.TriadFlip.TriadFlip;
+import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
@@ -44,7 +45,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
     public static void main(String[] args) {
-        linedListNode_Select_Index_From_End();
+        my_stack();
     }
     private static void 두뽑더(){
         int[] number = {2,1,3,4,1};
@@ -314,5 +315,22 @@ public class Main {
         ll.retrieve();
         ll.deleteSomethingNode(ll.get(2));
         ll.retrieve();
+    }
+
+    private static void my_stack(){
+        Stack<Integer> myStack = new Stack<>();
+        myStack.push(1);
+        myStack.push(2);
+        myStack.push(3);
+        myStack.push(4);
+        System.out.println(myStack.peek());//4
+        myStack.pop();
+        System.out.println(myStack.peek());//3
+        System.out.println(myStack.isEmpty());//false
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        System.out.println(myStack.isEmpty());//true
+        myStack.pop();
     }
 }
