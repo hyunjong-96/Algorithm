@@ -31,6 +31,7 @@ import org.algorithm.java.hyunjong.Algorithm.animalShelter.Cat;
 import org.algorithm.java.hyunjong.Algorithm.animalShelter.Dog;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
+import org.algorithm.java.hyunjong.Algorithm.tree.Tree;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
 import org.algorithm.java.hyunjong.Algorithm.모의고사.모의고사;
@@ -51,7 +52,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		animalShelter();
+		tree();
 	}
 
 	private static void 두뽑더() {
@@ -404,5 +405,28 @@ public class Main {
 				System.out.println(i+"번째 사람의 입양 : "+animal.getName() + " / order : "+animal.getOrder());
 			}
 		}
+	}
+
+	private static void tree(){
+		Tree tree = new Tree();
+
+		Tree.Node n7 = tree.makeNode(null, 7, null);
+		Tree.Node n8 = tree.makeNode(null, 8, null);
+		Tree.Node n9 = tree.makeNode(null, 9, null);
+		Tree.Node n10 = tree.makeNode(null, 10, null);
+		Tree.Node n11 = tree.makeNode(null, 11, null);
+		Tree.Node n3 = tree.makeNode(n7, 3, n8);
+		Tree.Node n4 = tree.makeNode(n9, 4, n10);
+		Tree.Node n5 = tree.makeNode(n11, 5, null);
+		Tree.Node n6 = tree.makeNode(null, 6, null);
+		Tree.Node n1 = tree.makeNode(n3, 1, n4);
+		Tree.Node n2 = tree.makeNode(n5, 2, n6);
+		Tree.Node root = tree.makeNode(n1, 0, n2);
+
+		tree.setRoot(root);
+
+		// tree.inOrder(tree.getRoot());
+		// tree.preOrder(tree.getRoot());
+		tree.postOrder(tree.getRoot());
 	}
 }
