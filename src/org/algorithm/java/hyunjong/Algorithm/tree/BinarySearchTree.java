@@ -54,4 +54,28 @@ public class BinarySearchTree {
 			System.out.println("Data found "+n.data);
 		}
 	}
+
+	// public boolean isBalance(){
+	// 	return checkBalance(root);
+	// }
+	//
+	// private boolean checkBalance(Node root){
+	// 	if(root == null) return true;
+	//
+	// 	int leftCount = subCount(root.left);
+	// 	int right = subCount(root.right);
+	//
+	// 	if(Math.abs(leftCount-right) > 1) return false;
+	//
+	// 	return checkBalance(root.left) && checkBalance(root.right);
+	// }
+	//
+	// private int subCount(Node root){
+	// 	if(root == null) return 0;
+	//
+	// 	int leftCount = subCount(root.left);
+	// 	int rightCount = subCount(root.right);
+	//
+	// 	return leftCount + rightCount;
+	// }
 }

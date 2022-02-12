@@ -53,4 +53,26 @@ public class Tree {
 			System.out.println(node.data);
 		}
 	}
+
+	public boolean isBalance(){
+		return checkBalance(root);
+	}
+
+	private boolean checkBalance(Node root){
+		if(root == null) return true;
+
+		int leftCount = subCount(root.left);
+		int right = subCount(root.right);
+
+		return Math.abs(leftCount - right) <= 1;
+	}
+
+	private int subCount(Node root){
+		if(root == null) return 0;
+
+		int leftCount = subCount(root.left);
+		int rightCount = subCount(root.right);
+
+		return leftCount + rightCount + 1;
+	}
 }

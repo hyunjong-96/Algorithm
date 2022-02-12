@@ -58,7 +58,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		makeBinarySearchTreeToList();
+		tree();
 	}
 
 	private static void 두뽑더() {
@@ -416,24 +416,39 @@ public class Main {
 	private static void tree(){
 		Tree tree = new Tree();
 
-		Tree.Node n7 = tree.makeNode(null, 7, null);
-		Tree.Node n8 = tree.makeNode(null, 8, null);
-		Tree.Node n9 = tree.makeNode(null, 9, null);
-		Tree.Node n10 = tree.makeNode(null, 10, null);
-		Tree.Node n11 = tree.makeNode(null, 11, null);
-		Tree.Node n3 = tree.makeNode(n7, 3, n8);
-		Tree.Node n4 = tree.makeNode(n9, 4, n10);
-		Tree.Node n5 = tree.makeNode(n11, 5, null);
-		Tree.Node n6 = tree.makeNode(null, 6, null);
-		Tree.Node n1 = tree.makeNode(n3, 1, n4);
-		Tree.Node n2 = tree.makeNode(n5, 2, n6);
-		Tree.Node root = tree.makeNode(n1, 0, n2);
+		// Tree.Node n12 = tree.makeNode(null, 12, null);
+		// Tree.Node n7 = tree.makeNode(n12, 7, null);
+		// Tree.Node n7 = tree.makeNode(null, 7, null);
+		// Tree.Node n8 = tree.makeNode(null, 8, null);
+		// Tree.Node n9 = tree.makeNode(null, 9, null);
+		// Tree.Node n10 = tree.makeNode(null, 10, null);
+		// Tree.Node n11 = tree.makeNode(null, 11, null);
+		// Tree.Node n3 = tree.makeNode(n7, 3, n8);
+		// Tree.Node n4 = tree.makeNode(n9, 4, n10);
+		// Tree.Node n5 = tree.makeNode(n11, 5, null);
+		// Tree.Node n6 = tree.makeNode(null, 6, null);
+		// Tree.Node n1 = tree.makeNode(n3, 1, n4);
+		// Tree.Node n2 = tree.makeNode(n5, 2, n6);
+		// Tree.Node root = tree.makeNode(n1, 0, n2);
 
+		Tree.Node n10 = tree.makeNode(null, 10 , null);
+		Tree.Node n3 = tree.makeNode(null, 3 , null);
+		Tree.Node n6 = tree.makeNode(null, 6 , null);
+		Tree.Node n9 = tree.makeNode(null, 9 , n10);
+		Tree.Node n0 = tree.makeNode(null, 0 , null);
+		Tree.Node n2 = tree.makeNode(null, 2 , n3);
+		Tree.Node n5 = tree.makeNode(null, 5 , n6);
+		Tree.Node n8 = tree.makeNode(null, 8 , n9);
+		Tree.Node n1 = tree.makeNode(n0, 1 , n2);
+		Tree.Node n7 = tree.makeNode(n5, 7 , n8);
+		Tree.Node root = tree.makeNode(n1, 4 , n7);
 		tree.setRoot(root);
+		//
+		// // tree.inOrder(tree.getRoot());
+		// // tree.preOrder(tree.getRoot());
+		// tree.postOrder(tree.getRoot());
 
-		// tree.inOrder(tree.getRoot());
-		// tree.preOrder(tree.getRoot());
-		tree.postOrder(tree.getRoot());
+		System.out.println(tree.isBalance());
 	}
 
 	private static void graph(){
@@ -471,13 +486,13 @@ public class Main {
 	}
 
 	private static void makeBinarySearchTree(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9,10};
 		BinarySearchTree tree = new BinarySearchTree(a);
-		tree.searchBTree(tree.getRoot(), 10);
+		// tree.searchBTree(tree.getRoot(), 10);
 	}
 
 	private static void makeBinarySearchTreeToList(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9,10};
 		BinarySearchTreeByLinkedList result = new BinarySearchTreeByLinkedList(a);
 		// ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list1 = result.BSTToList();
 		ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list2 = result.BSTtoList2();
