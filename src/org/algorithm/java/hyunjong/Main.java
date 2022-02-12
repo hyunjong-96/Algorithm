@@ -1,6 +1,8 @@
 package org.algorithm.java.hyunjong;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -34,6 +36,7 @@ import org.algorithm.java.hyunjong.Algorithm.graph.IsThereAWay;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
+import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTreeByLinkedList;
 import org.algorithm.java.hyunjong.Algorithm.tree.Tree;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
@@ -55,7 +58,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		makeBinarySearchTree();
+		makeBinarySearchTreeToList();
 	}
 
 	private static void 두뽑더() {
@@ -471,5 +474,16 @@ public class Main {
 		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
 		BinarySearchTree tree = new BinarySearchTree(a);
 		tree.searchBTree(tree.getRoot(), 10);
+	}
+
+	private static void makeBinarySearchTreeToList(){
+		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+		BinarySearchTreeByLinkedList result = new BinarySearchTreeByLinkedList(a);
+		// ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list1 = result.BSTToList();
+		ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list2 = result.BSTtoList2();
+
+		// result.printList(list1);
+
+		result.printList(list2);
 	}
 }
