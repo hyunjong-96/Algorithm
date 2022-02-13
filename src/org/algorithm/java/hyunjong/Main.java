@@ -33,6 +33,7 @@ import org.algorithm.java.hyunjong.Algorithm.animalShelter.Cat;
 import org.algorithm.java.hyunjong.Algorithm.animalShelter.Dog;
 import org.algorithm.java.hyunjong.Algorithm.graph.Graph;
 import org.algorithm.java.hyunjong.Algorithm.graph.IsThereAWay;
+import org.algorithm.java.hyunjong.Algorithm.hash.HashTable;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
@@ -59,7 +60,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		findNextNodeInBST();
+		makeHashTable();
 	}
 
 	private static void 두뽑더() {
@@ -514,5 +515,17 @@ public class Main {
 		t.findNext(t.root);
 		t.findNext(t.root.left.left);
 		t.findNext(t.root.right.left);
+	}
+
+	public static void makeHashTable(){
+		HashTable h = new HashTable(3);
+		h.put("sung", "She is pretty");
+		h.put("jin", "She is model");
+		h.put("hee", "She is an angel");
+		h.put("min", "She is cute");
+		System.out.println(h.get("sung"));
+		System.out.println(h.get("jin"));
+		System.out.println(h.get("hee"));
+		System.out.println(h.get("min"));
 	}
 }
