@@ -58,7 +58,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		tree();
+		makeBinarySearchTree();
 	}
 
 	private static void 두뽑더() {
@@ -486,9 +486,11 @@ public class Main {
 	}
 
 	private static void makeBinarySearchTree(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9,10};
+		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
 		BinarySearchTree tree = new BinarySearchTree(a);
 		// tree.searchBTree(tree.getRoot(), 10);
+		// System.out.println(tree.isValidateBST1());
+		System.out.println(tree.isValidateBST2());
 	}
 
 	private static void makeBinarySearchTreeToList(){
