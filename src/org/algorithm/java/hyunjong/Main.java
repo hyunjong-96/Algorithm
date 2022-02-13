@@ -37,6 +37,7 @@ import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTreeByLinkedList;
+import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchWithParents;
 import org.algorithm.java.hyunjong.Algorithm.tree.Tree;
 import org.algorithm.java.hyunjong.Algorithm.year2016.year2016;
 import org.algorithm.java.hyunjong.Algorithm.두개뽑아서더하기.두개더뽑아서더하기;
@@ -58,7 +59,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) {
-		makeBinarySearchTree();
+		findNextNodeInBST();
 	}
 
 	private static void 두뽑더() {
@@ -502,5 +503,16 @@ public class Main {
 		// result.printList(list1);
 
 		result.printList(list2);
+	}
+
+	private static void findNextNodeInBST(){
+		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+		BinarySearchWithParents t = new BinarySearchWithParents(a);
+
+		t.findNext(t.root.left.right.right);
+		t.findNext(t.root.left);
+		t.findNext(t.root);
+		t.findNext(t.root.left.left);
+		t.findNext(t.root.right.left);
 	}
 }
