@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -59,8 +60,8 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 
 public class Main {
 
-	public static void main(String[] args) {
-		makeHashTable();
+	public static void main(String[] args) throws Exception {
+		makeArrayList();
 	}
 
 	private static void 두뽑더() {
@@ -527,5 +528,26 @@ public class Main {
 		System.out.println(h.get("jin"));
 		System.out.println(h.get("hee"));
 		System.out.println(h.get("min"));
+	}
+
+	private static void makeArrayList() throws Exception {
+		MyArrayList al = new MyArrayList();
+		System.out.println(al.size());
+		al.add("0");
+		al.add("1");
+		al.add("2");
+		al.add("3");
+		al.add("4");
+		al.add("5");
+		al.add("6");
+		al.add("7");
+		al.add("8");
+		al.add("9");
+		System.out.println(al.get(5));
+		al.getArray();
+		al.remove(5);
+		al.getArray();
+		System.out.println(al.get(5));
+		al.getArray();
 	}
 }
