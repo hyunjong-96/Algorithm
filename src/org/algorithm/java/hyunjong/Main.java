@@ -549,5 +549,7 @@ public class Main {
 		al.getArray();
 		System.out.println(al.get(5));
 		al.getArray();
+		al.add(0,22);
+		al.getArray();
 	}
 }
