@@ -35,6 +35,7 @@ import org.algorithm.java.hyunjong.Algorithm.animalShelter.Dog;
 import org.algorithm.java.hyunjong.Algorithm.graph.Graph;
 import org.algorithm.java.hyunjong.Algorithm.graph.IsThereAWay;
 import org.algorithm.java.hyunjong.Algorithm.hash.HashTable;
+import org.algorithm.java.hyunjong.Algorithm.sort.QuickSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
@@ -61,7 +62,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		makeArrayList();
+		makeQuickSort();
 	}
 
 	private static void 두뽑더() {
@@ -401,22 +402,21 @@ public class Main {
 
 		Animal parcelOutDog1 = animalShelter.parcelOutDog();
 		Animal parcelOutDog2 = animalShelter.parcelOutDog();
-		System.out.println("강아지 입양1 : "+parcelOutDog1.getName() + " / order : "+parcelOutDog1.getOrder());
-		System.out.println("강아지 입양1 : "+parcelOutDog2.getName() + " / order : "+parcelOutDog2.getOrder());
-
+		System.out.println("강아지 입양1 : " + parcelOutDog1.getName() + " / order : " + parcelOutDog1.getOrder());
+		System.out.println("강아지 입양1 : " + parcelOutDog2.getName() + " / order : " + parcelOutDog2.getOrder());
 
 		for (int i = 6; i > 0; i--) {
 			Animal animal = animalShelter.parcelOut();
 
-			if(animal == null) {
+			if (animal == null) {
 				System.out.println("분양 끝!");
-			}else{
-				System.out.println(i+"번째 사람의 입양 : "+animal.getName() + " / order : "+animal.getOrder());
+			} else {
+				System.out.println(i + "번째 사람의 입양 : " + animal.getName() + " / order : " + animal.getOrder());
 			}
 		}
 	}
 
-	private static void tree(){
+	private static void tree() {
 		Tree tree = new Tree();
 
 		// Tree.Node n12 = tree.makeNode(null, 12, null);
@@ -434,17 +434,17 @@ public class Main {
 		// Tree.Node n2 = tree.makeNode(n5, 2, n6);
 		// Tree.Node root = tree.makeNode(n1, 0, n2);
 
-		Tree.Node n10 = tree.makeNode(null, 10 , null);
-		Tree.Node n3 = tree.makeNode(null, 3 , null);
-		Tree.Node n6 = tree.makeNode(null, 6 , null);
-		Tree.Node n9 = tree.makeNode(null, 9 , n10);
-		Tree.Node n0 = tree.makeNode(null, 0 , null);
-		Tree.Node n2 = tree.makeNode(null, 2 , n3);
-		Tree.Node n5 = tree.makeNode(null, 5 , n6);
-		Tree.Node n8 = tree.makeNode(null, 8 , n9);
-		Tree.Node n1 = tree.makeNode(n0, 1 , n2);
-		Tree.Node n7 = tree.makeNode(n5, 7 , n8);
-		Tree.Node root = tree.makeNode(n1, 4 , n7);
+		Tree.Node n10 = tree.makeNode(null, 10, null);
+		Tree.Node n3 = tree.makeNode(null, 3, null);
+		Tree.Node n6 = tree.makeNode(null, 6, null);
+		Tree.Node n9 = tree.makeNode(null, 9, n10);
+		Tree.Node n0 = tree.makeNode(null, 0, null);
+		Tree.Node n2 = tree.makeNode(null, 2, n3);
+		Tree.Node n5 = tree.makeNode(null, 5, n6);
+		Tree.Node n8 = tree.makeNode(null, 8, n9);
+		Tree.Node n1 = tree.makeNode(n0, 1, n2);
+		Tree.Node n7 = tree.makeNode(n5, 7, n8);
+		Tree.Node root = tree.makeNode(n1, 4, n7);
 		tree.setRoot(root);
 		//
 		// // tree.inOrder(tree.getRoot());
@@ -454,50 +454,50 @@ public class Main {
 		System.out.println(tree.isBalance());
 	}
 
-	private static void graph(){
+	private static void graph() {
 		Graph g = new Graph(9);
-		g.addEdge(0,1);
-		g.addEdge(1,2);
-		g.addEdge(1,3);
-		g.addEdge(2,3);
-		g.addEdge(2,4);
-		g.addEdge(3,4);
-		g.addEdge(3,5);
-		g.addEdge(5,7);
-		g.addEdge(5,6);
-		g.addEdge(6,8);
+		g.addEdge(0, 1);
+		g.addEdge(1, 2);
+		g.addEdge(1, 3);
+		g.addEdge(2, 3);
+		g.addEdge(2, 4);
+		g.addEdge(3, 4);
+		g.addEdge(3, 5);
+		g.addEdge(5, 7);
+		g.addEdge(5, 6);
+		g.addEdge(6, 8);
 
 		// g.dfs();
 		// g.bfs();
 		g.dfsR();
 	}
 
-	private static void isThereAWay(){
+	private static void isThereAWay() {
 		IsThereAWay g = new IsThereAWay(9);
-		g.addEdge(0,1);
-		g.addEdge(1,2);
-		g.addEdge(1,3);
-		g.addEdge(2,3);
-		g.addEdge(2,4);
-		g.addEdge(3,4);
-		g.addEdge(3,5);
-		g.addEdge(5,7);
-		g.addEdge(5,6);
-		g.addEdge(6,8);
+		g.addEdge(0, 1);
+		g.addEdge(1, 2);
+		g.addEdge(1, 3);
+		g.addEdge(2, 3);
+		g.addEdge(2, 4);
+		g.addEdge(3, 4);
+		g.addEdge(3, 5);
+		g.addEdge(5, 7);
+		g.addEdge(5, 6);
+		g.addEdge(6, 8);
 
-		System.out.println(g.search(0,6));
+		System.out.println(g.search(0, 6));
 	}
 
-	private static void makeBinarySearchTree(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+	private static void makeBinarySearchTree() {
+		int[] a = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		BinarySearchTree tree = new BinarySearchTree(a);
 		// tree.searchBTree(tree.getRoot(), 10);
 		// System.out.println(tree.isValidateBST1());
 		System.out.println(tree.isValidateBST2());
 	}
 
-	private static void makeBinarySearchTreeToList(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9,10};
+	private static void makeBinarySearchTreeToList() {
+		int[] a = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		BinarySearchTreeByLinkedList result = new BinarySearchTreeByLinkedList(a);
 		// ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list1 = result.BSTToList();
 		ArrayList<LinkedList<BinarySearchTreeByLinkedList.Node>> list2 = result.BSTtoList2();
@@ -507,8 +507,8 @@ public class Main {
 		result.printList(list2);
 	}
 
-	private static void findNextNodeInBST(){
-		int[] a = new int[] {0,1,2,3,4,5,6,7,8,9};
+	private static void findNextNodeInBST() {
+		int[] a = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		BinarySearchWithParents t = new BinarySearchWithParents(a);
 
 		t.findNext(t.root.left.right.right);
@@ -518,7 +518,7 @@ public class Main {
 		t.findNext(t.root.right.left);
 	}
 
-	public static void makeHashTable(){
+	public static void makeHashTable() {
 		HashTable h = new HashTable(3);
 		h.put("sung", "She is pretty");
 		h.put("jin", "She is model");
@@ -549,7 +549,19 @@ public class Main {
 		al.getArray();
 		System.out.println(al.get(5));
 		al.getArray();
-		al.add(0,22);
+		al.add(0, 22);
 		al.getArray();
+	}
+
+	private static void makeQuickSort() {
+		int[] a = {3, 9, 4, 7, 5, 0, 1, 6, 8, 2};
+
+		for(int e : a){
+			System.out.print(e + " ");
+		}
+		System.out.println();
+
+		QuickSort qs = new QuickSort(a);
+		qs.printArr(a);
 	}
 }
