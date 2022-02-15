@@ -35,6 +35,7 @@ import org.algorithm.java.hyunjong.Algorithm.animalShelter.Dog;
 import org.algorithm.java.hyunjong.Algorithm.graph.Graph;
 import org.algorithm.java.hyunjong.Algorithm.graph.IsThereAWay;
 import org.algorithm.java.hyunjong.Algorithm.hash.HashTable;
+import org.algorithm.java.hyunjong.Algorithm.sort.BubbleSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.MergeSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.QuickSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
@@ -63,7 +64,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		makeMergeSort();
+		makeBubbleSort();
 	}
 
 	private static void 두뽑더() {
@@ -575,5 +576,16 @@ public class Main {
 
 		MergeSort ms = new MergeSort(a);
 		ms.printArray(a);
+	}
+
+	private static void makeBubbleSort(){
+		int[] a = {3, 9, 4, 7, 5, 0, 1, 6, 8, 2};
+		for(int e : a){
+			System.out.print(e + " ");
+		}
+		System.out.println();
+
+		BubbleSort bs = new BubbleSort(a);
+		bs.printArray(a);
 	}
 }
