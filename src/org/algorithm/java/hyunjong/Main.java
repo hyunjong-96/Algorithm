@@ -38,6 +38,7 @@ import org.algorithm.java.hyunjong.Algorithm.hash.HashTable;
 import org.algorithm.java.hyunjong.Algorithm.sort.BubbleSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.MergeSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.QuickSort;
+import org.algorithm.java.hyunjong.Algorithm.sort.SelectSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
@@ -64,7 +65,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		makeBubbleSort();
+		makeSelectSort();
 	}
 
 	private static void 두뽑더() {
@@ -587,5 +588,16 @@ public class Main {
 
 		BubbleSort bs = new BubbleSort(a);
 		bs.printArray(a);
+	}
+
+	private static void makeSelectSort(){
+		int[] a = {3, 9, 4, 7, 5, 0, 1, 6, 8, 2};
+		for(int e : a){
+			System.out.print(e + " ");
+		}
+		System.out.println();
+
+		SelectSort ss = new SelectSort(a);
+		ss.printArray(a);
 	}
 }
