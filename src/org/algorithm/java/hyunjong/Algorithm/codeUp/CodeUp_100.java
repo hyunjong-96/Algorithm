@@ -14,20 +14,100 @@ public class CodeUp_100 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-
-		// //1086
-		String st = br.readLine();
-		int num = Integer.parseInt(st);
-		int sum = 0;
-		int i = 1;
-		while(sum < num){
-			sum+=i;
-			i++;
-			if(sum+i > num && sum != num) sum = sum+i;
+		//최대공약수
+		String[] arr = br.readLine().split(" ");
+		int a = Integer.parseInt(arr[0]);
+		int b = Integer.parseInt(arr[1]);
+		int max = Math.max(a, b);
+		int result = 0;
+		for (int i = 1; i <= max; i++) {
+			if (a % i == 0 && b % i == 0) {
+				result = i;
+			}
 		}
-		bw.write(String.valueOf(sum));
+		bw.write(String.valueOf(result));
 		bw.flush();
 		bw.close();
+		// //1092
+		// String[] arr = br.readLine().split(" ");
+		// int a = Integer.parseInt(arr[0]);
+		// int b = Integer.parseInt(arr[1]);
+		// int c = Integer.parseInt(arr[2]);
+		//
+		// int day = a>b ? (Math.min(b, c)) : (Math.min(a, c));
+		//
+		// while((day%a != 0) || (day%b != 0) || (day%c != 0)){
+		// 	day++;
+		// }
+		// bw.write(String.valueOf(day));
+		// bw.flush();
+		// bw.close();
+
+		// //1091
+		// String[] arr = br.readLine().split(" ");
+		// int a = Integer.parseInt(arr[0]);
+		// int b = Integer.parseInt(arr[1]);
+		// int c = Integer.parseInt(arr[2]);
+		// int d = Integer.parseInt(arr[3]);
+		//
+		// long result = a;
+		// for (int i = 0; i < d-1; i++) {
+		// 	result = (result*b)+c;
+		// }
+		// bw.write(String.valueOf(result));
+		// bw.flush();
+		// bw.close();
+		// //1090
+		// String[] arr = br.readLine().split(" ");
+		// int a = Integer.parseInt(arr[0]);
+		// int b = Integer.parseInt(arr[1]);
+		// int c = Integer.parseInt(arr[2]);
+		//
+		// long result = a;
+		// for (int i = 0; i < c-1; i++) {
+		// 	result*=b;
+		// }
+		// bw.write(String.valueOf(result));
+		// bw.flush();
+		// bw.close();
+		// //1089
+		// String[] arr = br.readLine().split(" ");
+		// int a = Integer.parseInt(arr[0]);
+		// int b = Integer.parseInt(arr[1]);
+		// int c = Integer.parseInt(arr[2]);
+		//
+		// int result = a;
+		// for (int i = 0; i < c-1; i++) {
+		// 	result+=b;
+		// }
+		// bw.write(String.valueOf(result));
+		// bw.flush();
+		// bw.close();
+		// //1088
+		// String st = br.readLine();
+		// int num = Integer.parseInt(st);
+		// for (int i = 1; i < num; i++) {
+		// 	if(i%3!=0){
+		// 		bw.write(String.valueOf(i));
+		// 		bw.write(" ");
+		// 	}
+		// }
+		// if(num%3!=0) bw.write(String.valueOf(num));
+		// bw.flush();
+		// bw.close();
+		// // //1086
+		// String st = br.readLine();
+		// int num = Integer.parseInt(st);
+		// int sum = 0;
+		// int i = 1;
+		// while(sum < num){
+		// 	sum+=i;
+		// 	i++;
+		// 	if(sum+i > num && sum != num) sum = sum+i;
+		// }
+		// bw.write(String.valueOf(sum));
+		// bw.flush();
+		// bw.close();
 		// String[] arr = br.readLine().split(" ");
 		// double w = Double.parseDouble(arr[0]);
 		// double h = Double.parseDouble(arr[1]);
