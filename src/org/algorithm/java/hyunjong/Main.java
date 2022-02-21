@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -32,6 +33,7 @@ import org.algorithm.java.hyunjong.Algorithm.animalShelter.Animal;
 import org.algorithm.java.hyunjong.Algorithm.animalShelter.AnimalShelter;
 import org.algorithm.java.hyunjong.Algorithm.animalShelter.Cat;
 import org.algorithm.java.hyunjong.Algorithm.animalShelter.Dog;
+import org.algorithm.java.hyunjong.Algorithm.codeUp.CodeUp_100;
 import org.algorithm.java.hyunjong.Algorithm.graph.Graph;
 import org.algorithm.java.hyunjong.Algorithm.graph.IsThereAWay;
 import org.algorithm.java.hyunjong.Algorithm.hash.HashTable;
@@ -65,7 +67,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		makeSelectSort();
+		codeUp_100();
 	}
 
 	private static void 두뽑더() {
@@ -599,5 +601,9 @@ public class Main {
 
 		SelectSort ss = new SelectSort(a);
 		ss.printArray(a);
+	}
+
+	private static void codeUp_100() throws IOException {
+		new CodeUp_100();
 	}
 }
