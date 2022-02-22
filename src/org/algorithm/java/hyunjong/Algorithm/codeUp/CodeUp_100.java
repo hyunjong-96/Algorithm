@@ -5,29 +5,206 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CodeUp_100 {
 
+	private boolean movie(int[][] space, int[]position){
+		int positionX = position[0];
+		int positionY = position[1];
+		if(positionX==8 && positionY==8 || space[positionX][positionY] == 2){
+			space[positionX][positionY] = 9;
+			return true;
+		}
+		if(space[positionX][positionY+1] == 1){
+			position[0]++;
+			space[positionX][positionY] = 9;
+			return false;
+		}else{
+			position[1]++;
+			space[positionX][positionY] = 9;
+			return false;
+		}
+	}
 	public CodeUp_100() throws IOException {
 		Scanner sc = new Scanner(System.in);
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		//최대공약수
-		String[] arr = br.readLine().split(" ");
-		int a = Integer.parseInt(arr[0]);
-		int b = Integer.parseInt(arr[1]);
-		int max = Math.max(a, b);
-		int result = 0;
-		for (int i = 1; i <= max; i++) {
-			if (a % i == 0 && b % i == 0) {
-				result = i;
-			}
+		//1099
+		int[][] space = new int[10][10];
+		for (int i = 0; i < 10; i++) {
+			space[i] = Arrays.stream(br.readLine().split(" "))
+				.mapToInt(Integer::parseInt).toArray();
 		}
-		bw.write(String.valueOf(result));
+		boolean success = false;
+		int[] position = new int[]{1,1};
+		while(!success){
+			success = movie(space, position);
+		}
+
+		for(int i =0;i<10;i++){
+			for(int j=0;j<10;j++){
+				bw.write(String.valueOf(space[i][j]));
+				bw.write(" ");
+			}
+			bw.write("\n");
+		}
 		bw.flush();
 		bw.close();
+		// //1098
+		// int[] size = Arrays.stream(br.readLine().split(" "))
+		// 	.mapToInt(Integer::parseInt).toArray();
+		// int[][] space = new int[size[0]][size[1]];
+		// int n = Integer.parseInt(br.readLine());
+		// int[][] info = new int[n][4];
+		// for (int i = 0; i < n; i++) {
+		// 	info[i] = Arrays.stream(br.readLine().split(" "))
+		// 		.mapToInt(Integer::parseInt).toArray();
+		// }
+		//
+		// for (int i = 0; i < n; i++) {
+		// 	int len = info[i][0];
+		// 	int arrow = info[i][1];
+		// 	int x = info[i][2] - 1;
+		// 	int y = info[i][3] - 1;
+		//
+		// 	for (int l = 0; l < len; l++) {
+		// 		space[x][y] = 1;
+		// 		if(arrow == 0){
+		// 			y++;
+		// 		}else{
+		// 			x++;
+		// 		}
+		// 	}
+		// }
+		//
+		// for(int i=0;i<size[0];i++){
+		// 	for(int j=0;j<size[1];j++){
+		// 		bw.write(String.valueOf(space[i][j]));
+		// 		bw.write(" ");
+		// 	}
+		// 	bw.write("\n");
+		// }
+		// bw.flush();
+		// bw.close();
+		// //1097
+		// int[][] space = new int[19][19];
+		// for (int i = 0; i < 19; i++) {
+		// 	int[] row = Arrays.stream(br.readLine().split(" "))
+		// 		.mapToInt(Integer::parseInt).toArray();
+		// 	space[i] = row;
+		// }
+		// int n = Integer.parseInt(br.readLine());
+		// int[][] point = new int[n][2];
+		// for (int i = 0; i < n; i++) {
+		// 	point[i] = Arrays.stream(br.readLine().split(" "))
+		// 		.mapToInt(Integer::parseInt).toArray();
+		// }
+		// for (int i = 0; i < n; i++) {
+		// 	int x = point[i][0]-1;
+		// 	int y = point[i][1]-1;
+		// 	for (int j = 0; j < 19; j++) {
+		// 		space[x][j] = space[x][j] == 1 ? 0 : 1;
+		// 		space[j][y] = space[j][y] == 1 ? 0 : 1;
+		// 	}
+		// }
+		//
+		// for(int i = 0;i<19;i++){
+		// 	for(int j = 0;j<19;j++){
+		// 		bw.write(String.valueOf(space[i][j]));
+		// 		bw.write(" ");
+		// 	}
+		// 	bw.write("\n");
+		// }
+		// bw.flush();
+		// bw.close();
+		// //1096
+		// int stoneCount = Integer.parseInt(br.readLine());
+		// // int[][] input = new int[stoneCount][2];
+		// int[][] space = new int[19][19];
+		// for (int i = 0; i < stoneCount; i++) {
+		// 	int[] s = Arrays.stream(br.readLine().split(" "))
+		// 		.mapToInt(Integer::parseInt).toArray();
+		//
+		// 	space[s[0]-1][s[1]-1] = 1;
+		// }
+		//
+		// for (int i = 0; i < space.length; i++) {
+		// 	for (int j = 0; j < space[i].length; j++) {
+		// 		bw.write(String.valueOf(space[i][j]));
+		// 		bw.write(" ");
+		// 	}
+		// 	bw.write("\n");
+		// }
+		// bw.flush();
+		// bw.close();
+		// //1095
+		// String length = br.readLine();
+		// String[] call = br.readLine().split(" ");
+		// int[] callNum = Arrays.stream(call).mapToInt(Integer::parseInt).toArray();
+		// for (int i = 0; i < call.length-1; i++) {
+		// 	if(callNum[i]<callNum[i+1]){
+		// 		int tmp = callNum[i];
+		// 		callNum[i] = callNum[i+1];
+		// 		callNum[i+1] = tmp;
+		// 	}
+		// }
+		// bw.write(String.valueOf(callNum[callNum.length-1]));
+		// bw.flush();
+		// bw.close();
+		// //1094
+		// String length = br.readLine();
+		// String[] call = br.readLine().split(" ");
+		// int start = 0;
+		// int end = call.length-1;
+		// while(start<end){
+		// 	String tmp = call[start];
+		// 	call[start] = call[end];
+		// 	call[end] = tmp;
+		// 	start++;
+		// 	end--;
+		// }
+		//
+		// for(String i : call){
+		// 	bw.write(i+" ");
+		// }
+		// bw.flush();
+		// bw.close();
+		// //1093
+		// String length = br.readLine();
+		// String[] call = br.readLine().split(" ");
+		// int[] callInt = Arrays.stream(call).mapToInt(Integer::parseInt).toArray();
+		// int callNumber = Integer.parseInt(length);
+		// int[] student = new int[23];
+		// for (int i = 0; i < 23; i++) {
+		// 	student[i] = 0;
+		// }
+		//
+		// for (int i = 0; i < callNumber; i++) {
+		// 	student[callInt[i]-1]++;
+		// }
+		//
+		// for(int i : student){
+		// 	bw.write(String.valueOf(i)+" ");
+		// }
+		// bw.flush();
+		// bw.close();
+		// //최대공약수
+		// String[] arr = br.readLine().split(" ");
+		// int a = Integer.parseInt(arr[0]);
+		// int b = Integer.parseInt(arr[1]);
+		// int max = Math.max(a, b);
+		// int result = 0;
+		// for (int i = 1; i <= max; i++) {
+		// 	if (a % i == 0 && b % i == 0) {
+		// 		result = i;
+		// 	}
+		// }
+		// bw.write(String.valueOf(result));
+		// bw.flush();
+		// bw.close();
 		// //1092
 		// String[] arr = br.readLine().split(" ");
 		// int a = Integer.parseInt(arr[0]);
