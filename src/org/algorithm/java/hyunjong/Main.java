@@ -9,6 +9,7 @@ import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.순열_사이클;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연결_요소의_갯수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.이분_그래프;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -70,7 +71,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		순열_사이클.main(args);
+		반복수열.main(args);
 	}
 
 	private static void 두뽑더() {
