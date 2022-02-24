@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.단지번호붙이기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.순열_사이클;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연결_요소의_갯수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.이분_그래프;
@@ -73,7 +74,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		텀_프로젝트.main(args);
+		단지번호붙이기.main(args);
 	}
 
 	private static void 두뽑더() {
