@@ -14,7 +14,9 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.이분_그래프;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.익은_토마토;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.텀_프로젝트;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.ToOne;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.일이삼_더하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -78,7 +80,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		타일링.main(args);
+		일이삼_더하기.main(args);
 	}
 
 	private static void 두뽑더() {
