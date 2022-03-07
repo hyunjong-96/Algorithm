@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong.Algorithm.BOJ.DP;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LCS2 {
