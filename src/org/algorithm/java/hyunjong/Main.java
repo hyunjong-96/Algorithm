@@ -16,6 +16,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.텀_프로젝트;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.ToOne;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴감소하는부분수열;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴바이토닉부분수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴증가하는부분수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장큰증가부분수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.설탕배달;
@@ -90,7 +91,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		가장긴감소하는부분수열.main(args);
+		가장긴바이토닉부분수열.main(args);
 	}
 
 	private static void 두뽑더() {
