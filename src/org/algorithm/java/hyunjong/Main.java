@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.다리만들기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.단지번호붙이기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.미로탐색;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.섬의개수;
@@ -92,7 +93,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		미로탐색.main(args);
+		다리만들기.main(args);
 	}
 
 	private static void 두뽑더() {
