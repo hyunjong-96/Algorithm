@@ -35,6 +35,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.포도주;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.제곱수의합;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -96,7 +97,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		계단오르기.main(args);
+		제곱수의합.main(args);
 	}
 
 	private static void 두뽑더() {
