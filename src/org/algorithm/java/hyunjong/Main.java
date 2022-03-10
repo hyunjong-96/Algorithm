@@ -32,6 +32,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.이친수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.일이삼_더하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링2;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일채우기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.포도주;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
@@ -97,7 +98,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		제곱수의합.main(args);
+		타일채우기.main(args);
 	}
 
 	private static void 두뽑더() {
