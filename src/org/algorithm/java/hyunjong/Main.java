@@ -26,6 +26,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.계단오르기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.설탕배달;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.쉬운계단수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.스티커;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.암호코드;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.연속합;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.오르막수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.이친수;
@@ -100,7 +101,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		합분해.main(args);
+		암호코드.main(args);
 	}
 
 	private static void 두뽑더() {
