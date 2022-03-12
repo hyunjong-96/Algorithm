@@ -31,6 +31,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.연속합;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.오르막수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.이친수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.일이삼_더하기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.카드구매하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일채우기;
@@ -101,7 +102,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		암호코드.main(args);
+		카드구매하기.main(args);
 	}
 
 	private static void 두뽑더() {
