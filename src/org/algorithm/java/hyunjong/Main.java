@@ -17,6 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.익은_토마토;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.텀_프로젝트;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리순회;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리의부모찾기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리의지름;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.ToOne;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴감소하는부분수열;
@@ -103,7 +104,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		트리의부모찾기.main(args);
+		트리의지름.main(args);
 	}
 
 	private static void 두뽑더() {
