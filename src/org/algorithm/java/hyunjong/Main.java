@@ -47,6 +47,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.나이순정렬;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.수정렬하기3;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기2;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.카드;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.제곱수의합;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -110,7 +111,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		수정렬하기3.main(args);
+		카드.main(args);
 	}
 
 	private static void 두뽑더() {

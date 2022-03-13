@@ -30,6 +30,7 @@ public class 수정렬하기3 {
 		// bw.flush();
 		// bw.close();
 	}
+	//메모리초과 ,Collections.sort는 합병정렬 사용하기때문에 초과 메모리 사용
 	// public static void main(String[] args) throws IOException {
 	// 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	// 	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
