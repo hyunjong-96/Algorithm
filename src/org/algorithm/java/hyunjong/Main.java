@@ -42,6 +42,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.파도반수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.포도주;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.합분해;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.제곱수의합;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -105,7 +106,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		트리의지름2.main(args);
+		좌표정렬하기.main(args);
 	}
 
 	private static void 두뽑더() {
