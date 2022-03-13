@@ -44,6 +44,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.합분해;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.국영수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.나이순정렬;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.수정렬하기3;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기2;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
@@ -109,7 +110,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		국영수.main(args);
+		수정렬하기3.main(args);
 	}
 
 	private static void 두뽑더() {
