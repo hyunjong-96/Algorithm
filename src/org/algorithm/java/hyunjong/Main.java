@@ -90,6 +90,7 @@ import org.algorithm.java.hyunjong.Algorithm.sort.SelectSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.괄호;
+import org.algorithm.java.hyunjong.Algorithm.stack.쇠막대기;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTreeByLinkedList;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchWithParents;
@@ -114,7 +115,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		괄호.main(args);
+		쇠막대기.main(args);
 	}
 
 	private static void 두뽑더() {
