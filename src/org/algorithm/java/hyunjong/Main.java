@@ -6,9 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.에디터;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.자료구조.Queue.덱;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.자료구조.Queue.큐;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -46,7 +44,6 @@ import org.algorithm.java.hyunjong.Algorithm.sort.QuickSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.SelectSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
-import org.algorithm.java.hyunjong.Algorithm.stack.쇠막대기;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTreeByLinkedList;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchWithParents;
@@ -71,7 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		에디터.main(args);
+		요새푸스문제.main(args);
 	}
 
 	private static void 두뽑더() {
