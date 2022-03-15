@@ -1,9 +1,8 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.Stack;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.자료구조.Stack;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class 스택 {

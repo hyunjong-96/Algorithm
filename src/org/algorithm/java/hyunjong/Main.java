@@ -6,52 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.다리만들기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.단지번호붙이기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.미로탐색;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.섬의개수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.순열_사이클;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연결_요소의_갯수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.이분_그래프;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.익은_토마토;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.텀_프로젝트;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리순회;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리의부모찾기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리의지름;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.트리의지름2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.ToOne;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴감소하는부분수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴바이토닉부분수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장긴증가하는부분수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.가장큰증가부분수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.계단오르기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.설탕배달;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.쉬운계단수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.스티커;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.암호코드;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.연속합;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.오르막수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.이친수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.일이삼_더하기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.카드구매하기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일링2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.타일채우기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.파도반수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.포도주;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.합분해;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.K번째수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.국영수;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.나이순정렬;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.수정렬하기3;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.좌표정렬하기2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.카드;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.Stack.스택;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.반복수열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.제곱수의합;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.자료구조.Queue.큐;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -89,7 +44,6 @@ import org.algorithm.java.hyunjong.Algorithm.sort.QuickSort;
 import org.algorithm.java.hyunjong.Algorithm.sort.SelectSort;
 import org.algorithm.java.hyunjong.Algorithm.stack.Stack;
 import org.algorithm.java.hyunjong.Algorithm.stack.StackSort;
-import org.algorithm.java.hyunjong.Algorithm.stack.괄호;
 import org.algorithm.java.hyunjong.Algorithm.stack.쇠막대기;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTree;
 import org.algorithm.java.hyunjong.Algorithm.tree.BinarySearchTreeByLinkedList;
@@ -115,7 +69,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		쇠막대기.main(args);
+		큐.main(args);
 	}
 
 	private static void 두뽑더() {
