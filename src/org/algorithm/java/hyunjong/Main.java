@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.대회or인턴;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.동전0;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.미르코;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -70,7 +71,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		대회or인턴.main(args);
+		미르코.main(args);
 	}
 
 	private static void 두뽑더() {
