@@ -16,6 +16,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.수묶이;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.회의실배정;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.날짜계산;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.리모컨;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -77,7 +78,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		날짜계산.main(args);
+		리모컨.main(args);
 	}
 
 	private static void 두뽑더() {
