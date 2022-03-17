@@ -12,6 +12,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.동전0;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.미르코;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.방번호;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.병든나이트;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.수묶이;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.회의실배정;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -75,7 +76,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		ATM.main(args);
+		수묶이.main(args);
 	}
 
 	private static void 두뽑더() {
