@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.ATM;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.대회or인턴;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.동전0;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.미르코;
@@ -74,7 +75,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		방번호.main(args);
+		ATM.main(args);
 	}
 
 	private static void 두뽑더() {
