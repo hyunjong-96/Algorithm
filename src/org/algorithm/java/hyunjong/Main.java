@@ -18,6 +18,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.날짜계산;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.리모컨;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.직사각형으로나누기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.차이를최대로;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -79,7 +80,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		직사각형으로나누기.main(args);
+		차이를최대로.main(args);
 	}
 
 	private static void 두뽑더() {
