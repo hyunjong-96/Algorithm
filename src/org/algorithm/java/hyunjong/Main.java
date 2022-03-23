@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.RGB거리;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.정수삼각형;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치함수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.다음순열;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.이전수열;
@@ -70,7 +72,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		피보나치함수.main(args);
+		정수삼각형.main(args);
 	}
 
 	private static void 두뽑더() {
