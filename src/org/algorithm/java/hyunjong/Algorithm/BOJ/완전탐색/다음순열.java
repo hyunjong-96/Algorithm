@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.SORT;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

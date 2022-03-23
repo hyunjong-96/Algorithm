@@ -6,20 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.ATM;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.대회or인턴;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.동전0;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.미르코;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.방번호;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.병든나이트;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.수묶이;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.회의실배정;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.SORT.다음순열;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.etc.요새푸스문제;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.날짜계산;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.리모컨;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.직사각형으로나누기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.차이를최대로;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.다음순열;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.이전수열;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -81,7 +69,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		다음순열.main(args);
+		이전수열.main(args);
 	}
 
 	private static void 두뽑더() {
