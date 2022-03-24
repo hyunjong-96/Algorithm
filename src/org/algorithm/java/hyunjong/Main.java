@@ -10,6 +10,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.RGB거리;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.정수삼각형;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.피보나치함수;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.다음순열;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.성냥깨비;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색.이전수열;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -72,7 +73,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		정수삼각형.main(args);
+		성냥깨비.main(args);
 	}
 
 	private static void 두뽑더() {
