@@ -8,6 +8,9 @@ import java.util.LinkedList;
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.숨바꼭질;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보물;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.신입사원;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.잃어버린괄호;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -69,7 +72,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		연구소.main(args);
+		신입사원.main(args);
 	}
 
 	private static void 두뽑더() {
