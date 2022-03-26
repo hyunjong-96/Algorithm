@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
