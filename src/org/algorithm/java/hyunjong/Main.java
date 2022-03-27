@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.숨바꼭질;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.적록색약;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.단어수학;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보물;
@@ -74,7 +75,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		LCS.main(args);
+		적록색약.main(args);
 	}
 
 	private static void 두뽑더() {
