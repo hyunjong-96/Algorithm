@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.숨바꼭질;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.안전영역;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.적록색약;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS;
@@ -75,7 +76,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		적록색약.main(args);
+		안전영역.main(args);
 	}
 
 	private static void 두뽑더() {
