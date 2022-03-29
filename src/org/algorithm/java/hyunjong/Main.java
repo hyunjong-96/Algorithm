@@ -11,6 +11,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.안전영역;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.적록색약;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.AtoB;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.거스름돈;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.단어수학;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보물;
@@ -77,7 +78,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		거스름돈.main(args);
+		AtoB.main(args);
 	}
 
 	private static void 두뽑더() {
