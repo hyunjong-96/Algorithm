@@ -17,6 +17,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.단어수학;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보물;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.신입사원;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.잃어버린괄호;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.카드정렬하기;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -78,7 +79,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		AtoB.main(args);
+		카드정렬하기.main(args);
 	}
 
 	private static void 두뽑더() {
