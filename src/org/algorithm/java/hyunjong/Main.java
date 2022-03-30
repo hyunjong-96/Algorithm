@@ -10,6 +10,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.숨바꼭질;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.안전영역;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.적록색약;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.토마토농장;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DP.LCS;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.AtoB;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.거스름돈;
@@ -19,6 +20,8 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보석도둑;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.신입사원;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.잃어버린괄호;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.카드정렬하기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.단어공부;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.숫자의합;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -80,7 +83,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		보석도둑.main(args);
+		단어공부.main(args);
 	}
 
 	private static void 두뽑더() {
