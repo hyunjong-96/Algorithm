@@ -20,6 +20,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.보석도둑;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.신입사원;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.잃어버린괄호;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.카드정렬하기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.로봇청소기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.프린터큐;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.AC;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.단어공부;
@@ -85,7 +86,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		프린터큐.main(args);
+		로봇청소기.main(args);
 	}
 
 	private static void 두뽑더() {
