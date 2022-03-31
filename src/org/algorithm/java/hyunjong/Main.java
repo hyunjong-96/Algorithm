@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.숨바꼭질;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.안전영역;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.알파벳;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.연구소;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.적록색약;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.토마토농장;
@@ -86,7 +87,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		로봇청소기.main(args);
+		알파벳.main(args);
 	}
 
 	private static void 두뽑더() {
