@@ -9,6 +9,7 @@ import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.덩치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.치킨배달;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.문자열폭발;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.생태학;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -70,7 +71,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		치킨배달.main(args);
+		생태학.main(args);
 	}
 
 	private static void 두뽑더() {
