@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.덩치;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.치킨배달;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.균형잡힌세상;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.문자열폭발;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.생태학;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -71,7 +72,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		생태학.main(args);
+		균형잡힌세상.main(args);
 	}
 
 	private static void 두뽑더() {
