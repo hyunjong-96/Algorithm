@@ -6,12 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.덩치;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.치킨배달;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.균형잡힌세상;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.단어뒤집기2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.문자열폭발;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.생태학;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.벽부수고이동하기;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -73,7 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		단어뒤집기2.main(args);
+		벽부수고이동하기.main(args);
 	}
 
 	private static void 두뽑더() {
