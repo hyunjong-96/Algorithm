@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.벽부수고이동하기;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.EASY_2048;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.구술탈출2;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -69,7 +70,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		구술탈출2.main(args);
+		EASY_2048.main(args);
 	}
 
 	private static void 두뽑더() {
