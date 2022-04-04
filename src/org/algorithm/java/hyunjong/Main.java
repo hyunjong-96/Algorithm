@@ -6,15 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.DFS_BFS.벽부수고이동하기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.EASY_2048;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.구술탈출2;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.뱀;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.시험감독;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.주사위굴리기;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.테트리미노;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.해시.Hashing;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.해시.베스트셀러;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.카카오.신고결과받기;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -76,7 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		베스트셀러.main(args);
+		신고결과받기.main(args);
 	}
 
 	private static void 두뽑더() {
