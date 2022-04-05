@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.카카오;
+package org.algorithm.java.hyunjong.Algorithm.카카오;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
