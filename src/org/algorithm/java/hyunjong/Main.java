@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.최단경로;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.플로이드;
 import org.algorithm.java.hyunjong.Algorithm.프로그래머스.그래프.가장먼노드;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -68,7 +70,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		가장먼노드.main(args);
+		최단경로.main(args);
 	}
 
 	private static void 두뽑더() {
