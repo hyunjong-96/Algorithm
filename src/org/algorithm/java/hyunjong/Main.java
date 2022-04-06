@@ -6,10 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.카카오.거리두기확인하기;
-import org.algorithm.java.hyunjong.Algorithm.카카오.실패율;
-import org.algorithm.java.hyunjong.Algorithm.카카오.오픈채팅방;
-import org.algorithm.java.hyunjong.Algorithm.카카오.카카오_문자열압축;
+import org.algorithm.java.hyunjong.Algorithm.프로그래머스.그래프.가장먼노드;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -64,7 +61,6 @@ import org.algorithm.java.hyunjong.Algorithm.예산.예산;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
-import org.algorithm.java.hyunjong.Algorithm.카카오.컬러링북;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
@@ -72,7 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		컬러링북.main(args);
+		가장먼노드.main(args);
 	}
 
 	private static void 두뽑더() {
