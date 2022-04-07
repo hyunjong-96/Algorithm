@@ -68,11 +68,12 @@ import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르�
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 import org.algorithm.java.hyunjong.Algorithm.프로그래머스.그래프.순위;
 import org.algorithm.java.hyunjong.Algorithm.프로그래머스.정렬.프로그래머스K번째수;
+import org.algorithm.java.hyunjong.Algorithm.프로그래머스.정렬.프로그래머스가장큰수;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		프로그래머스K번째수.main(args);
+		프로그래머스가장큰수.main(args);
 	}
 
 	private static void 두뽑더() {
