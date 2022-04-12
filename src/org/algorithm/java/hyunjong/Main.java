@@ -6,13 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.수들의합;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.최단경로;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.GREEDY.플로이드;
-import org.algorithm.java.hyunjong.Algorithm.BOJ.문자열.이미지타입;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.DP.N으로표현;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.DP.등굣길;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.그래프.가장먼노드;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.구현.퇴사;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -70,15 +64,11 @@ import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.그래프.순위;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.정렬.H_Index;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.정렬.프로그래머스K번째수;
-import org.algorithm.java.hyunjong.Algorithm.프로그래머스.정렬.프로그래머스가장큰수;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		이미지타입.main(args);
+		퇴사.main(args);
 	}
 
 	private static void 두뽑더() {
