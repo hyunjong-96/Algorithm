@@ -20,7 +20,7 @@ public class 스타트와링크 {
 	static boolean[] visit;
 	static int[][] team;
 	static int S1;
-	static int S2;크
+	static int S2;
 	static int min;
 	static int N;
 
