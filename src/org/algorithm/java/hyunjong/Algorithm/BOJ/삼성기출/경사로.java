@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.완전탐색;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
