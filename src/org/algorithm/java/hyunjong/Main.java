@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.감시;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.경사로;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.톱니바퀴;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
@@ -69,7 +70,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		톱니바퀴.main(args);
+		감시.main(args);
 	}
 
 	private static void 두뽑더() {
