@@ -67,6 +67,7 @@ import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하�
 import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.카카오.수식최대화;
+import org.algorithm.java.hyunjong.Algorithm.카카오.튜플;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
 import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
@@ -74,7 +75,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		수식최대화.main(args);
+		튜플.main(args);
 	}
 
 	private static void 두뽑더() {
