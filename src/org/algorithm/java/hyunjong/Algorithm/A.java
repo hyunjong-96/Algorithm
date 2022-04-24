@@ -1,8 +1,10 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class A {
@@ -11,6 +13,13 @@ public class A {
 		LinkedList<Number> test = new LinkedList<>();
 		test.add(new Number(1));
 		test.add(new Number(2));
+
+		List<List<Integer>> attributes = new ArrayList<>();
+
+		List<Integer> attribute = new ArrayList<>();
+
+		attributes.get(0).contains(attribute);
+
 
 		LinkedList<Number> test2 = new LinkedList<>();
 		test2 = (LinkedList<Number>)test.clone();
