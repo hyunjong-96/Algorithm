@@ -11,6 +11,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.감시;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.경사로;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.드래곤커브;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.사다리조작;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.인구이동;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.톱니바퀴;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
@@ -78,7 +79,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		캐시1차.main(args);
+		A.main(args);
 	}
 
 	private static void 두뽑더() {
