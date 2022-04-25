@@ -68,6 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.카카오.수식최대화;
 import org.algorithm.java.hyunjong.Algorithm.카카오.순위검색;
+import org.algorithm.java.hyunjong.Algorithm.카카오.캐시1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.튜플;
 import org.algorithm.java.hyunjong.Algorithm.카카오.프렌즈4블록;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
@@ -77,7 +78,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		프렌즈4블록.main(args);
+		캐시1차.main(args);
 	}
 
 	private static void 두뽑더() {
