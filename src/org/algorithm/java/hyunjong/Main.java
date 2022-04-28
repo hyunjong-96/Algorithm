@@ -73,6 +73,7 @@ import org.algorithm.java.hyunjong.Algorithm.카카오.자물쇠와열쇠;
 import org.algorithm.java.hyunjong.Algorithm.카카오.추석트래픽1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.캐시1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.튜플;
+import org.algorithm.java.hyunjong.Algorithm.카카오.표편집;
 import org.algorithm.java.hyunjong.Algorithm.카카오.프렌즈4블록;
 import org.algorithm.java.hyunjong.Algorithm.크레인인형뽑기게임.크레인인형뽑기게임;
 import org.algorithm.java.hyunjong.Algorithm.키패드누르기.키패드누르기;
@@ -81,7 +82,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		자물쇠와열쇠.main(args);
+		표편집.main(args);
 	}
 
 	private static void 두뽑더() {
