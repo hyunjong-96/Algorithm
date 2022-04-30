@@ -67,6 +67,7 @@ import org.algorithm.java.hyunjong.Algorithm.예산.예산;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
+import org.algorithm.java.hyunjong.Algorithm.카카오.셔틀버스1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.수식최대화;
 import org.algorithm.java.hyunjong.Algorithm.카카오.순위검색;
 import org.algorithm.java.hyunjong.Algorithm.카카오.자물쇠와열쇠;
@@ -82,7 +83,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		표편집.main(args);
+		셔틀버스1차.main(args);
 	}
 
 	private static void 두뽑더() {
