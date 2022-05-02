@@ -13,6 +13,7 @@ import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.드래곤커브;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.사다리조작;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.인구이동;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.톱니바퀴;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.투포인터.수고르기;
 import org.algorithm.java.hyunjong.Algorithm.CenterWord.CenterWord;
 import org.algorithm.java.hyunjong.Algorithm.DartGame.DartGame;
 import org.algorithm.java.hyunjong.Algorithm.Distinct.Distinct;
@@ -67,6 +68,7 @@ import org.algorithm.java.hyunjong.Algorithm.예산.예산;
 import org.algorithm.java.hyunjong.Algorithm.완주하지못한선수.완주하지못한선수;
 import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
+import org.algorithm.java.hyunjong.Algorithm.카카오.광고삽입;
 import org.algorithm.java.hyunjong.Algorithm.카카오.보석쇼핑;
 import org.algorithm.java.hyunjong.Algorithm.카카오.셔틀버스1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.수식최대화;
@@ -84,7 +86,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		보석쇼핑.main(args);
+		수고르기.main(args);
 	}
 
 	private static void 두뽑더() {
