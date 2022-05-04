@@ -23,6 +23,12 @@ public class A {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		LinkedList<Node> excel = new LinkedList<>();
+		Node[] nodes = new Node[5];
+
+		List<List<Node>> nodeList = new ArrayList<>();
+		for(int i=0;i<=10;i++){
+			nodeList.add(new ArrayList<>());
+		}
 
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int V = Integer.parseInt(st.nextToken());

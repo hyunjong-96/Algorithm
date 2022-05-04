@@ -16,7 +16,7 @@ public class K번째수 {
 
 		long front = 1;
 
-		//N이 100000이기 때문에 long을 써주거나 구하고자 하는 값은 K를 벗어나지 못하므로 K로 써준다.
+		//N이 100000이기 때문에 long을 써주거나 구하고자 하는 수값은 K를 벗어나지 못하므로 K로 써준다.
 		long rear = (long)N *N;
 		long mid;
 		while(front<rear){
