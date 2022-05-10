@@ -10,6 +10,7 @@ import org.algorithm.java.hyunjong.Algorithm.ArrayList.MyArrayList;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.누적합.구간합구하기4;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.누적합.구간합구하기5;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.누적합.이차원배열의합;
+import org.algorithm.java.hyunjong.Algorithm.BOJ.비트마스킹.막대기;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.감시;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.경사로;
 import org.algorithm.java.hyunjong.Algorithm.BOJ.삼성기출.드래곤커브;
@@ -96,7 +97,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		구간합구하기5.main(args);
+		막대기.main(args);
 	}
 
 	private static void 두뽑더() {
