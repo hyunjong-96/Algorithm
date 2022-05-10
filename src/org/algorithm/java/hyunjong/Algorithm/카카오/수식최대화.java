@@ -6,7 +6,7 @@ import java.util.List;
 
 public class 수식최대화 {
 	public static void main(String[] args) {
-		String expression = "50*6-3*2";
+		String expression = "10-20+30-40";
 		System.out.println(solution(expression));
 	}
 

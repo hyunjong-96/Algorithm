@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -23,6 +24,8 @@ public class A {
 		int t = 437674;
 		StringBuilder sb = new StringBuilder();
 
+		LinkedList<int[]> queue = new LinkedList<>();
+		Stack<int[]> stack = new Stack<>();
 
 
 		// bw.write(sb.toString());
