@@ -84,6 +84,7 @@ import org.algorithm.java.hyunjong.Algorithm.카카오.보석쇼핑;
 import org.algorithm.java.hyunjong.Algorithm.카카오.셔틀버스1차;
 import org.algorithm.java.hyunjong.Algorithm.카카오.수식최대화;
 import org.algorithm.java.hyunjong.Algorithm.카카오.순위검색;
+import org.algorithm.java.hyunjong.Algorithm.카카오.양과늑대;
 import org.algorithm.java.hyunjong.Algorithm.카카오.양궁대회;
 import org.algorithm.java.hyunjong.Algorithm.카카오.자물쇠와열쇠;
 import org.algorithm.java.hyunjong.Algorithm.카카오.주차요금계산;
@@ -100,7 +101,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		블로그.main(args);
+		양과늑대.main(args);
 	}
 
 	private static void 두뽑더() {

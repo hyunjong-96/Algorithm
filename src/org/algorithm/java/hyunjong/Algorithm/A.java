@@ -27,6 +27,8 @@ public class A {
 		LinkedList<int[]> queue = new LinkedList<>();
 		Stack<int[]> stack = new Stack<>();
 
+		List<Integer> test = new ArrayList<>();
+		int[] stones = new int[10];
 
 		// bw.write(sb.toString());
 		// bw.flush();
