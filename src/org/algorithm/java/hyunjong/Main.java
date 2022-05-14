@@ -79,6 +79,7 @@ import org.algorithm.java.hyunjong.Algorithm.음양더하기.MiunsPlusAdd;
 import org.algorithm.java.hyunjong.Algorithm.체육복.체육복;
 import org.algorithm.java.hyunjong.Algorithm.카카오.광고삽입;
 import org.algorithm.java.hyunjong.Algorithm.카카오.길찾기게임;
+import org.algorithm.java.hyunjong.Algorithm.카카오.매칭점수;
 import org.algorithm.java.hyunjong.Algorithm.카카오.미로탈출;
 import org.algorithm.java.hyunjong.Algorithm.카카오.보석쇼핑;
 import org.algorithm.java.hyunjong.Algorithm.카카오.셔틀버스1차;
@@ -101,7 +102,7 @@ import org.algorithm.java.hyunjong.Algorithm.폰켓.PhoneMonster;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		양과늑대.main(args);
+		매칭점수.main(args);
 	}
 
 	private static void 두뽑더() {

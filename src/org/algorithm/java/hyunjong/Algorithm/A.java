@@ -15,6 +15,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
+import java.util.regex.Pattern;
 
 public class A {
 	public static void main(String[] args) throws IOException{
@@ -30,6 +31,12 @@ public class A {
 		List<Integer> test = new ArrayList<>();
 		int[] stones = new int[10];
 
+		int a = 1;
+		int b = 2;
+		System.out.println((double)a/b);
+		 String testt = "asdafs<a href=>";
+		 System.out.println(testt.split("<.>").toString());
+		Pattern url = Pattern.compile("");
 		// bw.write(sb.toString());
 		// bw.flush();
 		// bw.close();
