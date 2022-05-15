@@ -23,15 +23,34 @@ public class A {
 		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		String test = "muzi!muzi!muzi1muzi";
-		// test = test.replaceAll("[0-9]"," ");
-		Pattern pattern = Pattern.compile("\\b"+"muzi"+"\\b");
-		Matcher matcher = pattern.matcher(test);
-		while(matcher.find()){
-			System.out.println(matcher.group());
+		String[] arr = {"img12.png", "img10.png", "img2.png", "img1.png"};
+		Arrays.sort(arr);
+		for(String s : arr){
+			System.out.println(s);
 		}
+		// System.out.println("png".compareTo("gif"));
+		String test = "";
+		System.out.println(test.substring(0).length()<1);
 		// bw.write(sb.toString());
 		// bw.flush();
 		// bw.close();
+		String s = arr[0].split("[0-9]")[0].toLowerCase();
+	}
+	class File implements Comparable<File>{
+		String file;
+		String head;
+		int number;
+		String tail;
+		@Override
+		public int compareTo(File o) {
+			int result = this.head.compareToIgnoreCase(o.head);
+			if(result == 0){
+				result = this.number-o.number;
+				if(result == 0){
+					result = this.tail.compareToIgnoreCase(o.tail);
+				}
+			}
+			return result;
+		}
 	}
 }
