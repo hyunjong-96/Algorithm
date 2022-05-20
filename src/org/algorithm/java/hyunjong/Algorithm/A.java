@@ -23,18 +23,17 @@ public class A {
 		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		String[] arr = {"img12.png", "img10.png", "img2.png", "img1.png"};
-		Arrays.sort(arr);
-		for(String s : arr){
-			System.out.println(s);
+		int[][] arr = {{1,1,1},{2,2,2},{3,3,3}};
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for(int t =0;t<3;t++){
+			for(int i=0;i<3;i++){
+				map.put(arr[t][i], map.getOrDefault(arr[t][i],0)+1);
+			}
 		}
-		// System.out.println("png".compareTo("gif"));
-		String test = "";
-		System.out.println(test.substring(0).length()<1);
-		// bw.write(sb.toString());
-		// bw.flush();
-		// bw.close();
-		String s = arr[0].split("[0-9]")[0].toLowerCase();
+
+		for(int key : map.keySet()){
+			System.out.println(map.get(key));
+		}
 	}
 	class File implements Comparable<File>{
 		String file;
