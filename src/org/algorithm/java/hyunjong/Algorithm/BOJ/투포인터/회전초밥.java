@@ -52,8 +52,11 @@ public class 회전초밥 {
 			if(visit[susi[(i+k-1)%N]] == 1) total++;
 
 			if(max<=total){
-				if(visit[c]==0) total++;
-				max = total;
+				if(visit[c]==0){
+					max = total + 1;
+				}else{
+					max = total;
+				}
 			}
 		}
 
