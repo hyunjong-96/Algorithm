@@ -78,7 +78,7 @@ public class 연구소3 {
 					int ny = current.y+dy[j];
 					int nx = current.x+dx[j];
 
-					if(ny>=0 && nx>=0 && ny<N && nx<N && !visit[ny][nx] && (map[ny][nx]==0 || map[ny][nx]==1)){
+					if(ny>=0 && nx>=0 && ny<N && nx<N && !visit[ny][nx] && (map[ny][nx]==0 || map[ny][nx]==2)){
 						visit[ny][nx] = true;
 						queue.add(new Virus(ny,nx));
 						if(map[ny][nx] == 0) subSpaceCount--;

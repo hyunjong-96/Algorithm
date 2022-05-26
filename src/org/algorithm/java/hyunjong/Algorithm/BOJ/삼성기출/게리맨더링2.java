@@ -134,83 +134,83 @@ public class 게리맨더링2 {
 		}
 	}
 
-	static void setSelector1(int x, int y, int d1, int d2) {
-		Queue<int[]> queue = new LinkedList<>();
-		boolean[][] visit = new boolean[N + 1][N + 1];
-		queue.add(new int[] {1, 1});
-
-		while (!queue.isEmpty()) {
-			int[] current = queue.poll();
-
-			for (int i = 0; i < 4; i++) {
-				int ny = current[0] + dy[i];
-				int nx = current[1] + dx[i];
-
-				if (ny >= 1 && ny < x + d1 && nx >= 1 && nx <= y && !visit[ny][nx] && !lineMap[ny][nx]) {
-					visit[ny][nx] = true;
-					queue.add(new int[] {ny, nx});
-					rangeMap[ny][nx] = 1;
-				}
-			}
-		}
-	}
-
-	static void setSelector2(int x, int y, int d1, int d2) {
-		Queue<int[]> queue = new LinkedList<>();
-		boolean[][] visit = new boolean[N + 1][N + 1];
-		queue.add(new int[] {0, N});
-
-		while (!queue.isEmpty()) {
-			int[] current = queue.poll();
-			for (int i = 0; i < 4; i++) {
-				int ny = current[0] + dy[i];
-				int nx = current[1] + dx[i];
-				if (ny >= 1 && ny <= x + d2 && nx > y && nx <= N && !visit[ny][nx] && !lineMap[ny][nx]) {
-					visit[ny][nx] = true;
-					queue.add(new int[] {ny, nx});
-					rangeMap[ny][nx] = 2;
-				}
-			}
-		}
-	}
-
-	static void setSelector3(int x, int y, int d1, int d2) {
-		Queue<int[]> queue = new LinkedList<>();
-		boolean[][] visit = new boolean[N + 1][N + 1];
-		queue.add(new int[] {N, 0});
-
-		while (!queue.isEmpty()) {
-			int[] current = queue.poll();
-			for (int i = 0; i < 4; i++) {
-				int ny = current[0] + dy[i];
-				int nx = current[1] + dx[i];
-				if (ny >= x + d1 && ny <= N && nx >= 1 && nx < y - d1 + d2 && !visit[ny][nx] && !lineMap[ny][nx]) {
-					visit[ny][nx] = true;
-					queue.add(new int[] {ny, nx});
-					rangeMap[ny][nx] = 3;
-				}
-			}
-		}
-	}
-
-	static void setSelector4(int x, int y, int d1, int d2) {
-		Queue<int[]> queue = new LinkedList<>();
-		boolean[][] visit = new boolean[N + 1][N + 1];
-		queue.add(new int[] {N, N});
-
-		while (!queue.isEmpty()) {
-			int[] current = queue.poll();
-			for (int i = 0; i < 4; i++) {
-				int ny = current[0] + dy[i];
-				int nx = current[1] + dx[i];
-				if (ny > x + d2 && ny <= N && nx >= y - d1 + d2 && nx <= N && !visit[ny][nx] && !lineMap[ny][nx]) {
-					visit[ny][nx] = true;
-					queue.add(new int[] {ny, nx});
-					rangeMap[ny][nx] = 4;
-				}
-			}
-		}
-	}
+	// static void setSelector1(int x, int y, int d1, int d2) {
+	// 	Queue<int[]> queue = new LinkedList<>();
+	// 	boolean[][] visit = new boolean[N + 1][N + 1];
+	// 	queue.add(new int[] {1, 1});
+	//
+	// 	while (!queue.isEmpty()) {
+	// 		int[] current = queue.poll();
+	//
+	// 		for (int i = 0; i < 4; i++) {
+	// 			int ny = current[0] + dy[i];
+	// 			int nx = current[1] + dx[i];
+	//
+	// 			if (ny >= 1 && ny < x + d1 && nx >= 1 && nx <= y && !visit[ny][nx] && !lineMap[ny][nx]) {
+	// 				visit[ny][nx] = true;
+	// 				queue.add(new int[] {ny, nx});
+	// 				rangeMap[ny][nx] = 1;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	//
+	// static void setSelector2(int x, int y, int d1, int d2) {
+	// 	Queue<int[]> queue = new LinkedList<>();
+	// 	boolean[][] visit = new boolean[N + 1][N + 1];
+	// 	queue.add(new int[] {0, N});
+	//
+	// 	while (!queue.isEmpty()) {
+	// 		int[] current = queue.poll();
+	// 		for (int i = 0; i < 4; i++) {
+	// 			int ny = current[0] + dy[i];
+	// 			int nx = current[1] + dx[i];
+	// 			if (ny >= 1 && ny <= x + d2 && nx > y && nx <= N && !visit[ny][nx] && !lineMap[ny][nx]) {
+	// 				visit[ny][nx] = true;
+	// 				queue.add(new int[] {ny, nx});
+	// 				rangeMap[ny][nx] = 2;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	//
+	// static void setSelector3(int x, int y, int d1, int d2) {
+	// 	Queue<int[]> queue = new LinkedList<>();
+	// 	boolean[][] visit = new boolean[N + 1][N + 1];
+	// 	queue.add(new int[] {N, 0});
+	//
+	// 	while (!queue.isEmpty()) {
+	// 		int[] current = queue.poll();
+	// 		for (int i = 0; i < 4; i++) {
+	// 			int ny = current[0] + dy[i];
+	// 			int nx = current[1] + dx[i];
+	// 			if (ny >= x + d1 && ny <= N && nx >= 1 && nx < y - d1 + d2 && !visit[ny][nx] && !lineMap[ny][nx]) {
+	// 				visit[ny][nx] = true;
+	// 				queue.add(new int[] {ny, nx});
+	// 				rangeMap[ny][nx] = 3;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	//
+	// static void setSelector4(int x, int y, int d1, int d2) {
+	// 	Queue<int[]> queue = new LinkedList<>();
+	// 	boolean[][] visit = new boolean[N + 1][N + 1];
+	// 	queue.add(new int[] {N, N});
+	//
+	// 	while (!queue.isEmpty()) {
+	// 		int[] current = queue.poll();
+	// 		for (int i = 0; i < 4; i++) {
+	// 			int ny = current[0] + dy[i];
+	// 			int nx = current[1] + dx[i];
+	// 			if (ny > x + d2 && ny <= N && nx >= y - d1 + d2 && nx <= N && !visit[ny][nx] && !lineMap[ny][nx]) {
+	// 				visit[ny][nx] = true;
+	// 				queue.add(new int[] {ny, nx});
+	// 				rangeMap[ny][nx] = 4;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	static void setPointAndLine() {
 		for (int x = 1; x <= N; x++) {
