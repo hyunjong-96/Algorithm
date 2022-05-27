@@ -34,8 +34,8 @@ public class 숫자카드2 {
 
 		StringBuilder sb = new StringBuilder();
 		for(int num : arr2){
-			int startIdx = upperCase(num);
-			int endIdx = lowerCase(num);
+			int startIdx = lowerCase(num);
+			int endIdx = upperCase(num);
 
 			sb.append(endIdx-startIdx).append(" ");
 		}
@@ -45,7 +45,7 @@ public class 숫자카드2 {
 		bw.close();
 	}
 
-	static int upperCase(int num){
+	static int lowerCase(int num){
 		int start=0;
 		int end=N;
 
@@ -62,7 +62,7 @@ public class 숫자카드2 {
 		return end;
 	}
 
-	static int lowerCase(int num){
+	static int upperCase(int num){
 		int start=0;
 		int end=N;
 
