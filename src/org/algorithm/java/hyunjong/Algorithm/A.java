@@ -20,20 +20,12 @@ import java.util.regex.Pattern;
 
 public class A {
 	public static void main(String[] args) throws IOException {
-		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		// BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		String test = "frodo";
+		String regex = "fr*do";
+		regex = regex.replace("*","(.*)");
+		Queue<Integer> queue = new LinkedList<>();
 
-		int[][] arr = {{1,1,1},{2,2,2},{3,3,3}};
-		HashMap<Integer, Integer> map = new HashMap<>();
-		for(int t =0;t<3;t++){
-			for(int i=0;i<3;i++){
-				map.put(arr[t][i], map.getOrDefault(arr[t][i],0)+1);
-			}
-		}
-
-		for(int key : map.keySet()){
-			System.out.println(map.get(key));
-		}
+		System.out.println(test.matches(regex));
 	}
 	class File implements Comparable<File>{
 		String file;
