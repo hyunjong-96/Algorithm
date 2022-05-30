@@ -24,6 +24,7 @@ public class A {
 		String regex = "fr*do";
 		regex = regex.replace("*","(.*)");
 		Queue<Integer> queue = new LinkedList<>();
+		LinkedList<File> ll = new LinkedList<>();
 
 		System.out.println(test.matches(regex));
 	}
