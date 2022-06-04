@@ -48,7 +48,7 @@ public class 원판돌리기 {
 		int answer = 0;
 		for(int i = 0;i<T;i++){
 			turn(i);
-			answer = count(i);
+			answer = count();
 		}
 
 		bw.write(String.valueOf(answer));
@@ -56,7 +56,7 @@ public class 원판돌리기 {
 		bw.close();
 	}
 
-	static int count(int turn){
+	static int count(){
 		int sum=0;
 		boolean flag = false;
 
@@ -65,7 +65,7 @@ public class 원판돌리기 {
 		for(int i=0;i<N;i++){
 			for(int j=0;j<M;j++){
 				if(!visit[i][j] && circles[i][j] != DELETE){
-					boolean result = bfs(i,j, visit, turn);
+					boolean result = bfs(i,j, visit);
 
 					if(result){
 						flag = true;
@@ -105,10 +105,7 @@ public class 원판돌리기 {
 		return sum;
 	}
 
-	static boolean bfs(int y, int x ,boolean[][] visit, int turn){
-		// if(turn == 1){
-		// 	System.out.println();
-		// }
+	static boolean bfs(int y, int x ,boolean[][] visit){
 		Queue<int[]> queue = new LinkedList<>();
 		queue.add(new int[]{y,x});
 		visit[y][x] = true;
@@ -120,12 +117,10 @@ public class 원판돌리기 {
 			int[] current = queue.poll();
 
 			for(int i=0;i<4;i++){
-				// int ny = current[0]+dy[i];
 
 				int ny = (current[0]+dy[i]);
 				int nx = (current[1]+dx[i])%M;
 				if(nx < 0) nx = M-1;
-				// int nx = current[1]+dx[i] < 0 ? M - current[1]+dx[i] : current[1]+dx[i]%M;
 
 				if(ny>=0 && nx>=0 && ny<N && nx<M && !visit[ny][nx] && circles[ny][nx] != DELETE && circles[ny][nx] == targetNumber){
 					flag = true;
