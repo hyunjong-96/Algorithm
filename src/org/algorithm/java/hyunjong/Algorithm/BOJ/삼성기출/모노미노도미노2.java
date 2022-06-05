@@ -120,47 +120,59 @@ public class 모노미노도미노2 {
 
 	static int deleteBlueCheck() {
 		int score = 0;
-		for (int y = 9; y >= 6; y--) {
-			boolean isFull = true;
-			for (int x = 0; x < 4; x++) {
-				if (board[x][y] == 0) {
-					isFull = false;
-					break;
+		while (true) {
+			boolean isAnyDelete = false;
+			for (int y = 9; y >= 6; y--) {
+				boolean isFull = true;
+				for (int x = 0; x < 4; x++) {
+					if (board[x][y] == 0) {
+						isFull = false;
+						break;
+					}
 				}
-			}
 
-			if (isFull) {
-				score++;
-				for (int i = y - 1; i >= 4; i--) {
-					for (int j = 0; j < 4; j++) {
-						board[j][i+1] = board[j][i];
+				if (isFull) {
+					isAnyDelete = true;
+					score++;
+					for (int i = y - 1; i >= 4; i--) {
+						for (int j = 0; j < 4; j++) {
+							board[j][i + 1] = board[j][i];
+							board[j][i] = 0;
+						}
 					}
 				}
 			}
+			if(!isAnyDelete) break;
 		}
 		return score;
 	}
 
 	static int deleteGreenCheck() {
 		int score = 0;
-		for (int x = 9; x >= 6; x--) {
-			boolean isFull = true;
-			for (int y = 0; y < 4; y++) {
-				if (board[x][y] == 0) {
-					isFull = false;
-					break;
+		while (true) {
+			boolean isAnyDelete = false;
+			for (int x = 9; x >= 6; x--) {
+				boolean isFull = true;
+				for (int y = 0; y < 4; y++) {
+					if (board[x][y] == 0) {
+						isFull = false;
+						break;
+					}
 				}
-			}
 
-
-			if (isFull) {
-				score++;
-				for (int i = x - 1; i >= 4; i--) {
-					for (int j = 0; j < 4; j++) {
-						board[i + 1][j] = board[i][j];
+				if (isFull) {
+					isAnyDelete = true;
+					score++;
+					for (int i = x - 1; i >= 4; i--) {
+						for (int j = 0; j < 4; j++) {
+							board[i + 1][j] = board[i][j];
+							board[i][j] = 0;
+						}
 					}
 				}
 			}
+			if (!isAnyDelete)
+				break;
 		}
 		return score;
 	}
