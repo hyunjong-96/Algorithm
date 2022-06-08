@@ -20,29 +20,21 @@ import java.util.regex.Pattern;
 
 public class A {
 	public static void main(String[] args) throws IOException {
-		String test = "frodo";
-		String regex = "fr*do";
-		regex = regex.replace("*","(.*)");
-		Queue<Integer> queue = new LinkedList<>();
-		LinkedList<File> ll = new LinkedList<>();
 
-		System.out.println(test.matches(regex));
-	}
-	class File implements Comparable<File>{
-		String file;
-		String head;
-		int number;
-		String tail;
-		@Override
-		public int compareTo(File o) {
-			int result = this.head.compareToIgnoreCase(o.head);
-			if(result == 0){
-				result = this.number-o.number;
-				if(result == 0){
-					result = this.tail.compareToIgnoreCase(o.tail);
-				}
-			}
-			return result;
+		Shark[][] map = new Shark[4][4];
+		map[0][1] = new Shark();
+
+		System.out.println(map[0][0]);
+		System.out.println(map[0][1]);
+
+		if(map[0][0] == null){
+			System.out.println("yes");
 		}
 	}
+
+	static class Shark{
+		int num;
+		int smell;
+	}
+
 }
