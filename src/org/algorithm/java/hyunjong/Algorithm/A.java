@@ -20,100 +20,168 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class A {
-	static int N;
+	static int N, Q, LEN;
 	static int[][] map;
-	static int[] dx = {0,1,0,-1};   //토네이토의 x 이동 방향
-	static int[] dy = {-1,0,1,0};   //토네이토의 y 이동 방향
-	static int[] dc = {1,1,2,2};   // 토네이도의 각 방향으로 이동하는 횟수
-	static int[][] dsx = {{-1,1,-2,-1,1,2,-1,1,0}, {-1,-1,0,0,0,0,1,1,2},    //모래가 퍼지는 x방향
-		{1,-1,2,1,-1,-2,1,-1,0}, {1,1,0,0,0,0,-1,-1,-2}};
-	static int[][] dsy = {{1,1,0,0,0,0,-1,-1,-2},{-1,1,-2,-1,1,2,-1,1,0},    //모래가 퍼지는 y방향
-		{-1,-1,0,0,0,0,1,1,2},{1,-1,2,1,-1,-2,1,-1,0}};
-	static int[] sandRatio ={1,1,2,7,7,2,10,10,5};
-	public static void main(String[] args) throws Exception{
+	static boolean[][] visit;
+	static int sum = 0;
+	static int[] dy = {0, 1, 0, -1};
+	static int[] dx = {1, 0, -1, 0};
+
+	static class Pair {
+		int y, x;
+
+		Pair(int y, int x) {
+			this.y = y;
+			this.x = x;
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		StringTokenizer st;
 
-		N = Integer.parseInt(br.readLine().trim());
-		map = new int[N][N];
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken());
+		Q = Integer.parseInt(st.nextToken());
+		LEN = (int) Math.pow(2, N);
+		map = new int[LEN][LEN];
 
-		for(int r=0; r<N; r++){
-			st = new StringTokenizer(br.readLine()," ");
-			for(int c=0; c<N; c++){
-				map[r][c] = Integer.parseInt(st.nextToken());
+		for (int i = 0; i < LEN; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < LEN; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+				sum += map[i][j];
 			}
 		}
 
-		int result = calculateOutSand(N/2, N/2);
-		bw.write(String.valueOf(result));
-		bw.flush();
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < Q; i++) {
+			int level = Integer.parseInt(st.nextToken());
+			divideArea(level);
+			reduceIce();
+		}
 
-
-
-
+		System.out.println(sum);
+		System.out.println(searchBiggestArea());
 	}
-	//현재위치에서 이동 -> 이동한 위치의 모래 뿌리기 -> 이동한위치를 현재위치로 업데이트
-	static int calculateOutSand(int x, int y){
-		int totalOutSand = 0;
+	// level에 따른 회전 구역 정하기
+	private static void divideArea(int level) {
+		int len = (int) Math.pow(2, level);
+		for (int y = 0; y < LEN; y += len) {
+			for (int x = 0; x < LEN; x += len) {
+				// 정해진 구역 90도 회전
+				rotate(y, x, level);
+			}
+		}
+	}
 
-		int currentX = x;
-		int currentY = y;
+	// 해당 구역 전체를 90도 회전
+	private static void rotate(int sY, int sX, int level) {
+		int y = sY;
+		int x = sX;
+		List<Integer> temp;
+		int len = (int) Math.pow(2, level);
+		// 해당구역의 안쪽까지 90도 회전을 위해 len을 2씩 감소, len이 2이상인 동안 지속
+		while (len >= 2) {
+			temp = new ArrayList<>();
+			int j = x;
+			int i = y + len-1;
+			for (int _i = y; _i < y + len -1; _i++) temp.add(map[_i][x]);
+			for (int _i = y; _i < y + len-1; _i++)
+				map[_i][x] = map[y + len -1][j++];
+			for (int _j = x; _j < x + len-1; _j++)
+				map[y + len-1][_j] = map[i--][x + len-1];
+			for (int _i = y + len - 1; _i >= y; _i--)
+				map[_i][x + len-1] = map[y][j--];
+			int idx=0;
+			for(int _j=x+len-1;_j>x;_j--)
+				map[y][_j]=temp.get(idx++);
+			y++;
+			x++;
+			len-=2;
+		}
+	}
 
-		while (true) {
-			for(int d = 0; d<4; d++){
-				for(int moveCount = 0; moveCount<dc[d]; moveCount++){
-					//현재위치에서 이동
-					int nextX = currentX+dx[d];
-					int nextY = currentY+dy[d];
+	// 가장 큰 덩어리를 탐색
+	private static int searchBiggestArea() {
+		int max = 0;
+		visit = new boolean[LEN][LEN];
+		for (int i = 0; i < LEN; i++) {
+			for (int j = 0; j < LEN; j++) {
+				if (map[i][j] == 0 || visit[i][j]) continue;
+				// 해당 위치에서의 덩어리 크기를 탐색(bfs)
+				int size = bfs(i, j);
+				// 이전까지의 최대 덩어리 크기와 비교/갱신
+				max = Math.max(size, max);
+			}
+		}
+		return max;
+	}
 
-					if(nextX<0 || nextY<0 || nextX>=N ||nextY>=N){
-						return totalOutSand;
-					}
+	// 해당 위치의 덩어리 크기 탐색
+	private static int bfs(int i, int j) {
+		int size = 0;
+		visit[i][j] = true;
+		LinkedList<Pair> q = new LinkedList<>();
+		q.add(new Pair(i, j));
 
-					//이동한 위치의 모래 뿌리기
-					int sand = map[nextX][nextY];
-					map[nextX][nextY] = 0;
-					int spreadTotal = 0;
+		while (!q.isEmpty()) {
+			Pair now = q.poll();
+			int y = now.y;
+			int x = now.x;
+			size++;
 
+			for (int d = 0; d < 4; d++) {
+				int ny = y + dy[d];
+				int nx = x + dx[d];
+				if (!isRange(ny, nx)) continue;
+				if (visit[ny][nx] || map[ny][nx] == 0) continue;
+				visit[ny][nx] = true;
+				q.add(new Pair(ny, nx));
+			}
+		}
+		return size;
+	}
 
-					for(int spread = 0; spread<9; spread++){
-						int sandX = nextX + dsx[d][spread];
-						int sandY = nextY + dsy[d][spread];
-						int spreadAmount = (sand*sandRatio[spread])/100;
-
-						if(sandX<0 || sandX>=N || sandY<0 || sandY>=N){
-							totalOutSand += spreadAmount;
-						}
-						else{
-							map[sandX][sandY]+=spreadAmount;
-						}
-						spreadTotal+= spreadAmount;
-					}
-
-					//알파
-					int alphaX = nextX+dx[d];
-					int alphaY = nextY+dy[d];
-					int alphaAmount = sand -spreadTotal;
-					if(alphaX<0 || alphaX>=N || alphaY<0|| alphaY>=N){
-						totalOutSand +=alphaAmount;
-					}
-					else{
-						map[alphaX][alphaY] +=alphaAmount;
-					}
-
-
-					//이동한 위치를 현재위치로 업데이트
-					currentX = nextX;
-					currentY = nextY;
+	// 얼음 녹이기
+	private static void reduceIce() {
+		List<Pair> list= new ArrayList<>();
+		for (int i = 0; i < LEN; i++) {
+			for (int j = 0; j < LEN; j++) {
+				if (map[i][j] == 0) continue;
+				//해당 위치 얼음이 녹는지 확인
+				if (isReduce(i, j)) {
+					sum--;
+					// 한번에 녹이기 위함
+					// 녹는 얼음에 대한 좌표 List에 추가
+					list.add(new Pair(i ,j));
 				}
 			}
-
-			//횟수 업데이트
-			for(int index = 0; index<4; index++){
-				dc[index] +=2;
-			}
 		}
+		// List에 담긴 위치의 얼음을 감소
+		for (int i = 0; i < list.size(); i++) {
+			map[list.get(i).y][list.get(i).x]--;
+		}
+	}
+
+	// 해당 위치에 얼음이 녹는지 확인
+	private static boolean isReduce(int i, int j) {
+		int cnt = 0;
+		for (int d = 0; d < 4; d++) {
+			int ny = i + dy[d];
+			int nx = j + dx[d];
+			if (!isRange(ny, nx)) continue;
+			if (map[ny][nx] > 0) cnt++;
+		}
+		// 인근 얼음의 개수가 3 이상이면 얼음이 안녹음 -> false
+		if (cnt >= 3) return false;
+			// 이외에는 얼음이 녹음 -> true
+		else return true;
+	}
+
+	// 현재 위치가 정상 범위인지 확인
+	private static boolean isRange(int i, int j) {
+		if (i < 0 || j < 0 || i >= LEN || j >= LEN) return false;
+		else return true;
 	}
 
 }
