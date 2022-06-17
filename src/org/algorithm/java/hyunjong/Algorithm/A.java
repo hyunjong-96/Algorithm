@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -20,168 +21,90 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class A {
-	static int N, Q, LEN;
-	static int[][] map;
-	static boolean[][] visit;
-	static int sum = 0;
-	static int[] dy = {0, 1, 0, -1};
-	static int[] dx = {1, 0, -1, 0};
+	static int N, L, P;
+	static int ans = 0;
+	static Queue<Station> stations;
 
-	static class Pair {
-		int y, x;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-		Pair(int y, int x) {
-			this.y = y;
-			this.x = x;
+		N = sc.nextInt();
+		stations = new PriorityQueue<>(new Comparator<Station>() {
+			@Override
+			public int compare(Station o1, Station o2) {
+				return Integer.compare(o1.location, o2.location);
+			}
+		});
+
+		int sum = 0;
+		for (int i = 0; i < N; i++) {
+			int tempL = sc.nextInt();
+			int tempV = sc.nextInt();
+			stations.add(new Station(tempL, tempV));
+
+			sum += tempV;
 		}
-	}
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		L = sc.nextInt();
+		P = sc.nextInt();
 
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		N = Integer.parseInt(st.nextToken());
-		Q = Integer.parseInt(st.nextToken());
-		LEN = (int) Math.pow(2, N);
-		map = new int[LEN][LEN];
+		// 모든 주유소를 들리더라도 최정 거리에 도달할 수 없다면 미리 끝냅니다.
+		if (sum + P < L) {
+			System.out.println(-1);
+			return;
+		}
 
-		for (int i = 0; i < LEN; i++) {
-			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < LEN; j++) {
-				map[i][j] = Integer.parseInt(st.nextToken());
-				sum += map[i][j];
+		int currentLocation = 0; // 갈 수 있는 가장 먼 주유소의 위치
+		int reachableLocation = P;
+		int currentPetrol = P;
+
+		Queue<Station> reachableStations = new PriorityQueue<>(new Comparator<Station>() {
+			@Override
+			public int compare(Station o1, Station o2) {
+				return Integer.compare(o1.Petrol, o2.Petrol) * -1;
+			}
+		});
+
+		Station nextStation;
+		while (reachableLocation < L) {
+
+			//범위내 갈 수 있는 주유소를 확인
+			while (!stations.isEmpty() && stations.peek().location <= reachableLocation) {
+				reachableStations.add(stations.remove());
+			}
+
+			//더이상 갈 수 있는 주유소가 없을 경우
+			if (reachableStations.isEmpty()) {
+				ans = -1;
+				break;
+			}
+
+			//멈추는 주유소를 추가
+			nextStation = reachableStations.remove();
+			ans++;
+
+			if (nextStation.location < currentLocation){
+				// 가장 먼 주유소보다 이전에 있던 주유소라면 거리와 상관없이 연료만 추가
+				reachableLocation += nextStation.Petrol;
+				currentPetrol += nextStation.Petrol;
+			}else {
+				// 다음 멈추는 주유소가 가장 먼 거리라면 이동하면서 사용된 연료 계산
+				int usedPetrol = nextStation.location-currentLocation;
+				currentLocation = nextStation.location;
+				currentPetrol = currentPetrol + nextStation.Petrol - usedPetrol;
+				reachableLocation = currentLocation+currentPetrol;
 			}
 		}
 
-		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < Q; i++) {
-			int level = Integer.parseInt(st.nextToken());
-			divideArea(level);
-			reduceIce();
-		}
-
-		System.out.println(sum);
-		System.out.println(searchBiggestArea());
-	}
-	// level에 따른 회전 구역 정하기
-	private static void divideArea(int level) {
-		int len = (int) Math.pow(2, level);
-		for (int y = 0; y < LEN; y += len) {
-			for (int x = 0; x < LEN; x += len) {
-				// 정해진 구역 90도 회전
-				rotate(y, x, level);
-			}
-		}
+		System.out.println(ans);
 	}
 
-	// 해당 구역 전체를 90도 회전
-	private static void rotate(int sY, int sX, int level) {
-		int y = sY;
-		int x = sX;
-		List<Integer> temp;
-		int len = (int) Math.pow(2, level);
-		// 해당구역의 안쪽까지 90도 회전을 위해 len을 2씩 감소, len이 2이상인 동안 지속
-		while (len >= 2) {
-			temp = new ArrayList<>();
-			int j = x;
-			int i = y + len-1;
-			for (int _i = y; _i < y + len -1; _i++) temp.add(map[_i][x]);
-			for (int _i = y; _i < y + len-1; _i++)
-				map[_i][x] = map[y + len -1][j++];
-			for (int _j = x; _j < x + len-1; _j++)
-				map[y + len-1][_j] = map[i--][x + len-1];
-			for (int _i = y + len - 1; _i >= y; _i--)
-				map[_i][x + len-1] = map[y][j--];
-			int idx=0;
-			for(int _j=x+len-1;_j>x;_j--)
-				map[y][_j]=temp.get(idx++);
-			y++;
-			x++;
-			len-=2;
+	static class Station {
+		int location, Petrol;
+
+		Station(int location, int Petrol) {
+			this.location = location;
+			this.Petrol = Petrol;
 		}
 	}
-
-	// 가장 큰 덩어리를 탐색
-	private static int searchBiggestArea() {
-		int max = 0;
-		visit = new boolean[LEN][LEN];
-		for (int i = 0; i < LEN; i++) {
-			for (int j = 0; j < LEN; j++) {
-				if (map[i][j] == 0 || visit[i][j]) continue;
-				// 해당 위치에서의 덩어리 크기를 탐색(bfs)
-				int size = bfs(i, j);
-				// 이전까지의 최대 덩어리 크기와 비교/갱신
-				max = Math.max(size, max);
-			}
-		}
-		return max;
-	}
-
-	// 해당 위치의 덩어리 크기 탐색
-	private static int bfs(int i, int j) {
-		int size = 0;
-		visit[i][j] = true;
-		LinkedList<Pair> q = new LinkedList<>();
-		q.add(new Pair(i, j));
-
-		while (!q.isEmpty()) {
-			Pair now = q.poll();
-			int y = now.y;
-			int x = now.x;
-			size++;
-
-			for (int d = 0; d < 4; d++) {
-				int ny = y + dy[d];
-				int nx = x + dx[d];
-				if (!isRange(ny, nx)) continue;
-				if (visit[ny][nx] || map[ny][nx] == 0) continue;
-				visit[ny][nx] = true;
-				q.add(new Pair(ny, nx));
-			}
-		}
-		return size;
-	}
-
-	// 얼음 녹이기
-	private static void reduceIce() {
-		List<Pair> list= new ArrayList<>();
-		for (int i = 0; i < LEN; i++) {
-			for (int j = 0; j < LEN; j++) {
-				if (map[i][j] == 0) continue;
-				//해당 위치 얼음이 녹는지 확인
-				if (isReduce(i, j)) {
-					sum--;
-					// 한번에 녹이기 위함
-					// 녹는 얼음에 대한 좌표 List에 추가
-					list.add(new Pair(i ,j));
-				}
-			}
-		}
-		// List에 담긴 위치의 얼음을 감소
-		for (int i = 0; i < list.size(); i++) {
-			map[list.get(i).y][list.get(i).x]--;
-		}
-	}
-
-	// 해당 위치에 얼음이 녹는지 확인
-	private static boolean isReduce(int i, int j) {
-		int cnt = 0;
-		for (int d = 0; d < 4; d++) {
-			int ny = i + dy[d];
-			int nx = j + dx[d];
-			if (!isRange(ny, nx)) continue;
-			if (map[ny][nx] > 0) cnt++;
-		}
-		// 인근 얼음의 개수가 3 이상이면 얼음이 안녹음 -> false
-		if (cnt >= 3) return false;
-			// 이외에는 얼음이 녹음 -> true
-		else return true;
-	}
-
-	// 현재 위치가 정상 범위인지 확인
-	private static boolean isRange(int i, int j) {
-		if (i < 0 || j < 0 || i >= LEN || j >= LEN) return false;
-		else return true;
-	}
-
 }
