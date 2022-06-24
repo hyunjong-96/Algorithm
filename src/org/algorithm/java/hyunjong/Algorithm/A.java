@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,21 +26,17 @@ public class A {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		String line = br.readLine();
-		String pattern = br.readLine();
 
-		int count=0;
-		while(line.length() > 0){
-			if(line.startsWith(pattern)){
-				count++;
-				line = line.substring(pattern.length());
-			}else{
-				line = line.substring(1);
-			}
+
+		String[] test = new String[]{"123", "1244", "125", "37"};
+
+		Arrays.sort(test);
+
+		for(String t : test){
+			System.out.println(Arrays.toString(t.getBytes(StandardCharsets.UTF_8)));
 		}
-
-		bw.write(String.valueOf(count));
-		bw.flush();
-		bw.close();
+		// bw.write(String.valueOf(count));
+		// bw.flush();
+		// bw.close();
 	}
 }
