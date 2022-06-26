@@ -29,13 +29,10 @@ public class 마법사상어와파이어스톰 {
 		mapSize = (int)Math.pow(2, N);
 
 		map = new int[mapSize][mapSize];
-		int iceCount = 0;
 		for (int i = 0; i < mapSize; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			for (int j = 0; j < mapSize; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
-				if (map[i][j] != 0)
-					iceCount++;
 			}
 		}
 

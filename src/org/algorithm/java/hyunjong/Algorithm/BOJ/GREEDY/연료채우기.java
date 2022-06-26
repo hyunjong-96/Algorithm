@@ -17,36 +17,36 @@ public class 연료채우기 {
 
 		int N = Integer.parseInt(br.readLine());
 		Soil[] soils = new Soil[N];
-		// PriorityQueue<Soil> stations = new PriorityQueue<>();
+		PriorityQueue<Soil> stations = new PriorityQueue<>();
 		for (int i = 0; i < N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			soils[i] = new Soil(a, b);
-			//stations.add(new Soil(a,b));*/
+			// soils[i] = new Soil(a, b);
+			stations.add(new Soil(a,b));
 		}
 
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int L = Integer.parseInt(st.nextToken());
 		int P = Integer.parseInt(st.nextToken());
 
-		Arrays.sort(soils);
+		// Arrays.sort(soils);
 
 		int answer = 0;
-		int position = 0;
+		// int position = 0;
 		PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 		while(P < L){
 
-			// while(!stations.isEmpty() && stations.peek().pos <= P){
-			// 	pq.offer(stations.poll().oil);
-			// }
-			for(int i = position;i<N;i++){
-				if(P<soils[i].pos) {
-					break;
-				}
-				pq.offer(soils[i].oil);
+			while(!stations.isEmpty() && stations.peek().pos <= P){
+				pq.offer(stations.poll().oil);
 			}
-
+			// for(int i = position;i<N;i++){
+			// 	if(P<soils[i].pos) {
+			// 		break;
+			// 	}
+			// 	pq.offer(soils[i].oil);
+			// }
+			//
 			if(pq.isEmpty()){
 				answer = -1;
 				break;

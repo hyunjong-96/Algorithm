@@ -23,20 +23,40 @@ import java.util.regex.Pattern;
 
 public class A {
 
+	static int[] human;
+	static int N;
+	static int M;
+	static int K;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+		int X = 100;
+		int Y = 58;
 
-		String[] test = new String[]{"123", "1244", "125", "37"};
+		double rate = (((double)Y/X)*100);
+		double rate2 = (((double)Y*100/X));
 
-		Arrays.sort(test);
+		System.out.println(rate);
+		System.out.println(rate2);
 
-		for(String t : test){
-			System.out.println(Arrays.toString(t.getBytes(StandardCharsets.UTF_8)));
-		}
-		// bw.write(String.valueOf(count));
-		// bw.flush();
-		// bw.close();
+		// int originRate = (int)(((double)Y/X)*100);
+		// long start=0;
+		// long end=2000000000;
+		// while(start<end){
+		// 	long mid = (start+end)/2;
+		//
+		// 	int rate = (int)(((double)(Y+mid)/(X+mid))*100);
+		//
+		// 	if(originRate != rate){
+		// 		end = mid;
+		// 	}else{
+		// 		start = mid+1;
+		// 	}
+		// }
+
+		// bw.write(String.valueOf(end));
+		bw.flush();
+		bw.close();
 	}
 }
