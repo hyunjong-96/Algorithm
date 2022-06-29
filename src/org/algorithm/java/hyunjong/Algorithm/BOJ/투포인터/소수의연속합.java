@@ -45,15 +45,6 @@ public class 소수의연속합 {
 
 			if(sum == N) count++;
 		}
-		// while (start <= end && end < primeList.size()) {
-		// 	if (sum < N) {
-		// 		sum += primeList.get(end++);
-		// 	} else {
-		// 		if (sum == N)
-		// 			count++;
-		// 		sum -= primeList.get(start++);
-		// 	}
-		// }
 		return count;
 	}
 

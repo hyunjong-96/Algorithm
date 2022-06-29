@@ -23,40 +23,34 @@ import java.util.regex.Pattern;
 
 public class A {
 
-	static int[] human;
 	static int N;
 	static int M;
-	static int K;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		int X = 100;
-		int Y = 58;
+		int X = 1999999999;
+		int Y = 1979999999;
+		System.out.println((int)(((long)Y*100)/X));
+		int origin = (int)(((long)Y*100)/X);
 
-		double rate = (((double)Y/X)*100);
-		double rate2 = (((double)Y*100/X));
+		int i=0;
+		int count=0;
+		while(true){
 
-		System.out.println(rate);
-		System.out.println(rate2);
+			int rate = (int)(((long)(Y+i)*100)/(X+i));
+			if(origin != rate){
+				System.out.println(count);
+				break;
+			}
+			i++;
+			count++;
+		}
 
-		// int originRate = (int)(((double)Y/X)*100);
-		// long start=0;
-		// long end=2000000000;
-		// while(start<end){
-		// 	long mid = (start+end)/2;
-		//
-		// 	int rate = (int)(((double)(Y+mid)/(X+mid))*100);
-		//
-		// 	if(originRate != rate){
-		// 		end = mid;
-		// 	}else{
-		// 		start = mid+1;
-		// 	}
-		// }
-
-		// bw.write(String.valueOf(end));
+		// bw.write(String.valueOf(answer));
 		bw.flush();
 		bw.close();
 	}
+
+
 }
