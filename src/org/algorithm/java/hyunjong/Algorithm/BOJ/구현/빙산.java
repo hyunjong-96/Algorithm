@@ -42,7 +42,7 @@ public class 빙산 {
 			int group = checkGroup();
 
 			if (group > 1) {
-				answer = time;
+				answer = group;
 				break;
 			} else if (group == 0) {
 				break;

@@ -29,23 +29,14 @@ public class A {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		int X = 1999999999;
-		int Y = 1979999999;
-		System.out.println((int)(((long)Y*100)/X));
-		int origin = (int)(((long)Y*100)/X);
+		String test = "([]())";
 
-		int i=0;
-		int count=0;
-		while(true){
+		test= test.replaceAll("\\[\\]","3");
+		test =test.replaceAll("\\(\\)","2");
 
-			int rate = (int)(((long)(Y+i)*100)/(X+i));
-			if(origin != rate){
-				System.out.println(count);
-				break;
-			}
-			i++;
-			count++;
-		}
+		System.out.println(test);
+		// System.out.println(test2);
+		// System.out.println(test3);
 
 		// bw.write(String.valueOf(answer));
 		bw.flush();
