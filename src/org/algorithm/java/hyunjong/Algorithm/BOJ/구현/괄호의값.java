@@ -38,17 +38,11 @@ public class 괄호의값 {
 					//열기괄호
 					if (c == '[' || c == '(') {
 						stack.push(c);
-						if (temp == 0) {
-							if (c == '[')
-								temp += 3;
-							else
-								temp += 2;
-						} else {
-							if (c == '[')
-								temp *= 3;
-							else
-								temp *= 2;
-						}
+
+						if (c == '[')
+							temp *= 3;
+						else
+							temp *= 2;
 					}
 					//닫기 괄호
 					else if (c == ']' || c == ')') {
