@@ -54,6 +54,14 @@ public class 구간합구하기 {
 		bw.close();
 	}
 
+	//세그먼트 트리의 특정 구간 합
+	//시간 복잡도 : O(logN)
+	//start : 구간의 시작점, end : 구간의 끝 점
+	//left : 구간 합의 시작점, right : 구간 합의 끝 점
+	//node : 현재 정점
+	//합을 구하려는 구간에 start와 end가 없다면 0
+	//포함되어있다면 해당 구간의 합을 반환한다.
+	//그렇지 않다면 구간을 변경하여 합을 구하려는 구간에 start와 end가 포함되도록 재귀
 	static long sum(int start, int end, int node, int left, int right) {
 		if (right < start || end < left)
 			return 0;
@@ -64,6 +72,9 @@ public class 구간합구하기 {
 		return sum(start, mid, node * 2, left, right) + sum(mid + 1, end, node * 2 + 1, left, right);
 	}
 
+	//세그먼트 트리의 특정 노드 값 수정
+	//시간 복잡도 : O(logN)
+	//수정하려는 곳이 범위(start~end)에 존재하면 수정하려는 값을 트리의 값에 수정한다.(start==end==idx 일 때 까지)
 	static void update(int start, int end, int node, int index, long dif) {
 		if (index < start || end < index)
 			return;
@@ -77,7 +88,8 @@ public class 구간합구하기 {
 		update(start, mid, node * 2, index, dif);
 		update(mid + 1, end, node * 2+1, index, dif);
 	}
-
+	//세그먼트 트리 초기화
+	//배열의 범위를 start~mid, mid+1~end로 나누어서 각 범위의 합을 저장
 	static long segmentTreeInit(int start, int end, int node) {
 		if (start == end)
 			return tree[node] = nums[start];
