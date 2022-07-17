@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
+//https://velog.io/@kimmjieun/%EB%B0%B1%EC%A4%80-9613%EB%B2%88-GCD-%ED%95%A9-Java-%EC%9E%90%EB%B0%94
+//gcd : 최대공약수(b==0일때까지 a=b,b=a%b 반복, 단 a에는 a,b중 큰값이어야한다), lcm : 최소공약수(A*B/gcd)
 public class GCD합 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

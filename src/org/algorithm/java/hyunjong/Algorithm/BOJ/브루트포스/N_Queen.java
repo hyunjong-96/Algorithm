@@ -11,10 +11,6 @@ public class N_Queen {
 	static int[] col;
 	static int answer;
 
-	//위,왼,아래,오,왼쪽위, 오른쪽위, 왼쪽아래, 오른쪽 아래
-	static int[] dy = {-1, 0, 1, 0, -1, -1, 1, 1};
-	static int[] dx = {0, -1, 0, 1, -1, 1, -1, 1};
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -32,7 +28,6 @@ public class N_Queen {
 
 	static void setQueen(int count, int N, int y) {
 		if (count == N) {
-			// if (validation(N))
 			answer++;
 			return;
 		}
@@ -42,11 +37,6 @@ public class N_Queen {
 				col[y] = j;
 				setQueen(count+1, N, y+1);
 			}
-			// if (board[y][j] == 0 && validation(y,j,N)) {
-			// 	board[y][j] = 1;
-			// 	setQueen(count + 1, N, y + 1);
-			// 	board[y][j] = 0;
-			// }
 		}
 
 	}
@@ -57,16 +47,5 @@ public class N_Queen {
 			if((y-r)==Math.abs(x-col[r])) return false;
 		}
 		return true;
-		// for(int d=0;d<8;d++){
-		// 	int ny = y+dy[d];
-		// 	int nx = x+dx[d];
-		// 	while(ny>=0&&nx>=0&&ny<N&&nx<N){
-		// 		if(board[ny][nx]==1) return false;
-		//
-		// 		ny+=dy[d];
-		// 		nx+=dx[d];
-		// 	}
-		// }
-		// return true;
 	}
 }
