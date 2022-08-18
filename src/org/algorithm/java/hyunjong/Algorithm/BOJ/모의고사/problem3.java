@@ -26,4 +26,13 @@ class problem3 {
 
 		return answer;
 	}
+
+
+	abstract class Animal{
+		abstract void cry();
+
+		void sleep(){
+			System.out.println("sleep");
+		}
+	}
 }
