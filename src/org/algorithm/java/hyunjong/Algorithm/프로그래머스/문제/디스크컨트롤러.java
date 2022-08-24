@@ -31,6 +31,7 @@ public class 디스크컨트롤러 {
 		//시작 요청 시간 기준 오름차순
 		Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
 
+		//특정 작업 완료 시간 이전에 시작 요청된 작업들.
 		PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
 		int answer = 0;
@@ -38,15 +39,31 @@ public class 디스크컨트롤러 {
 		int jobIndex = 0;
 		int count = 0;
 
+		//작업 완료한 개수 count가 모두 완료되면 반복문 종료
 		while (count < jobs.length) {
 
+			/*
+			특정 작업을 가리키는 jobIndex 가 jobs.length를 넘지않으며
+			해당 작업의 시작 요청시간이 작업 시간 이전에 요청된 것이라면
+			pq에 넣고 다음 작업을 조건에 비교해준다..
+			 */
 			while (jobIndex < jobs.length && jobs[jobIndex][0] <= end) {
 				pq.offer(jobs[jobIndex++]);
 			}
 
+			/*
+			만약 pq가 비어있다면 해당 작업이 끝난 시간 이전에 시작 요청을 한 작업이 없는 것이기 때문에
+			다음 작업의 시작 요청 시간을 end로 갱신하여 다음 반복문에서 다음 작업을 pq에 넣어서
+			적어도 다음 작업이 작업 시작을 할수 있게 한다.
+			 */
 			if (pq.isEmpty()) {
 				end = jobs[jobIndex][0];
-			} else {
+			}
+			/*
+			pq가 비어있지 않다면 수행한 작업의 처리완료 시간과 끝난 시간을 구해서 answer와 end에 갱신해주고
+			해당 작업을 처리했다는 count를 갱신해준다.
+			 */
+			else {
 				int[] currentJob = pq.poll();
 				int startRequestTime = currentJob[0];
 				int latency = currentJob[1];
@@ -58,6 +75,7 @@ public class 디스크컨트롤러 {
 			}
 		}
 
+		//평균이기 때문에 answer에 jobs.length로 나눠준다.
 		return answer/jobs.length;
 	}
 }
