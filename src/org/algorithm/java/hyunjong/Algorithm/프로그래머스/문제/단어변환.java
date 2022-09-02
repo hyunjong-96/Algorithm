@@ -12,6 +12,9 @@ begin의 각 자릿수를 바꿀수 있는 문자로 변경하면서 target과 �
 
 begin의 각 자릿수에 바꿀수 있는 문자로 변경하고 이미 변경하지 않았고 words에 포함되어있는 단어라면
 queue와 visit에 저장한다.
+
+다른 방법으로, 비교 문자열과 words의 단어를 비교하면서 다른 문자가 1개 인 경우 dfs로 다른 문자열을 호출시키고 백트래킹 하는 방벙도 있다.
+이게 더 쉬울 듯.
  */
 public class 단어변환 {
 	public static void main(String[] args) {
