@@ -1,6 +1,11 @@
 package org.algorithm.java.hyunjong.Algorithm.프로그래머스.문제;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Stack;
+import java.util.TreeSet;
+import java.util.Vector;
 
 /*
 초마다 떨어지는 가격 여부를 확인하고 떨어질때까지 걸리는 시간을 구해야한다.
@@ -21,6 +26,10 @@ public class 주식가격 {
 		for(int r : result){
 			System.out.println(r);
 		}
+
+		new HashSet<>();
+		new LinkedList<>();
+		new TreeSet<>();
 	}
 
 	static int[] solution(int[] prices){
