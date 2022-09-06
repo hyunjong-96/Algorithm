@@ -8,6 +8,8 @@ import java.util.List;
 https://school.programmers.co.kr/learn/courses/30/lessons/84512#
 
 완탐으로 모든 단어의 조합을 만들어 정렬하고 단어 리스트에 몇번째에 있는지 확인
+
+5개의 문자로 5자리를 만들어야하기 때문에 5+25+125+725+3124 로 3905의 경우의 수가 필요하다
  */
 public class 모음사전 {
 	public static void main(String[] args) {
