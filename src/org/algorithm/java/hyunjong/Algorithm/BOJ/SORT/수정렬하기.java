@@ -50,13 +50,13 @@ public class 수정렬하기 {
 				end--;
 			}
 
-			// if(start<=end){
+			if(start<=end){
 				int swap = arr[start];
 				arr[start] = arr[end];
 				arr[end] = swap;
 				start++;
 				end--;
-			// }
+			}
 		}
 
 		return start;
