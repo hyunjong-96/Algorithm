@@ -1,109 +1,70 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Scanner;
+import java.util.Random;
 import java.util.Set;
-import java.util.Stack;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.IntStream;
 
 public class A {
-	static int[][] beginning;
-	static int[][] target;
-	static int answer;
+	static AtomicInteger integer = new AtomicInteger(0);
+	static int integer1 = 0;
+	public static void main(String[] args) throws Exception {
+		LinkedList<Integer> ll = new LinkedList<>();
+		ll.remove();
+		List<Integer> list = new ArrayList<>();
+	}
 
-	static class Genre implements Comparable<Genre>{
-		String genre;
-		int totalPlay;
-		public Genre(String genre, int play){
-			this.genre = genre;
-			this.totalPlay = play;
-		}
-
-		@Override
-		public int compareTo(Genre o) {
-			return o.totalPlay - this.totalPlay;
+	static void printCollection(Collection<? super MyParent> c){
+		for(Object p : c){
+			System.out.println(p);
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-		String s = "8a   b ";
-		String[] arr = s.split(" ");
-		for(String a : arr){
-			System.out.println(a.toUpperCase().trim());
+	static void setCollection(Collection<? super MyParent> c){
+		c.add(new MyChild(1));
+		c.add(new MyParent(2));
+	}
+
+	static class MyGrandParent{
+		public int id;
+		public MyGrandParent(int id){
+			this.id = id;
 		}
+	}
+	static class MyParent extends MyGrandParent{
+		public int id;
+		public MyParent(int id) {
+			super(id);
+			this.id = id;
+		}
+	}
 
-
-		// Map<Genre, PriorityQueue<Integer>> map = new TreeMap<>();
-		// map.put(new Genre("classic", 1450), new PriorityQueue<>());
-		// map.put(new Genre("jazz", 1000), new PriorityQueue<>());
-		// map.put(new Genre("pop", 5000), new PriorityQueue<>());
-		// Deque<Integer> dq = new LinkedList<>();
-		// dq.offer(5);
-		// dq.offer(10);
-		//
-		// while(!dq.isEmpty()){
-		// 	System.out.println(dq.poll());
-		// }
-
-		// PriorityQueue<Integer> pq = new PriorityQueue<>();
-		// pq.remove(1);
-		// for(Genre g : map.keySet()){
-		// 	System.out.println(g.genre);
-		// }
-
-		// int size = pq.size();
-		// for(int i=0;i<size;i++){
-		// 	System.out.println(pq.poll().totalPlay);
-		// }
-		// for(Genre g : pq){
-		// 	System.out.println(g.totalPlay);
-		// }
-
-		// list.add(1);
-		// list.add(2);
-		// list.add(3);
-		//
-		//
-		// Queue<Integer> queue = new LinkedList<>();
-		// Set<Integer> set = new HashSet<>();
-		// LinkedList<Integer> ll = new LinkedList<>();
-		//
-		//
-		// PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
-		// List<Integer> list2 = list.stream().map(n -> n + 1).collect(Collectors.toList());
-		// for (int l : list) {
-		// 	System.out.println(l);
-		// }
-		//
-		// for (int l : list2) {
-		// 	System.out.println(l);
-		// }
+	static class MyChild extends MyParent{
+		public int id;
+		public MyChild(int id) {
+			super(id);
+			this.id = id;
+		}
 	}
 }
