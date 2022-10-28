@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.다익스트라;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.그래프.다익스트라;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
