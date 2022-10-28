@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,6 +34,7 @@ public class A {
 		LinkedList<Integer> ll = new LinkedList<>();
 		ll.remove();
 		List<Integer> list = new ArrayList<>();
+		Queue<Integer> queue = new ArrayDeque<>();
 	}
 
 	static void printCollection(Collection<? super MyParent> c){
