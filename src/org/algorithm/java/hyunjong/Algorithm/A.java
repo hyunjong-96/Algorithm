@@ -1,5 +1,6 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
+import java.io.ObjectOutputStream;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -31,10 +32,19 @@ public class A {
 	static AtomicInteger integer = new AtomicInteger(0);
 	static int integer1 = 0;
 	public static void main(String[] args) throws Exception {
-		LinkedList<Integer> ll = new LinkedList<>();
-		ll.remove();
 		List<Integer> list = new ArrayList<>();
-		Queue<Integer> queue = new ArrayDeque<>();
+		list.add(100);
+		list.add(1);
+		list.add(101);
+		list.add(Integer.MAX_VALUE);
+		test(list);
+
+	}
+
+	static public void test(List<?> list){
+		for(Object o : list){
+			System.out.println(o);
+		}
 	}
 
 	static void printCollection(Collection<? super MyParent> c){
