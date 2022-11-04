@@ -1,6 +1,11 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,54 +34,57 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class A {
-	static AtomicInteger integer = new AtomicInteger(0);
-	static int integer1 = 0;
-	public static void main(String[] args) throws Exception {
-		List<Integer> list = new ArrayList<>();
-		list.add(100);
-		list.add(1);
-		list.add(101);
-		list.add(Integer.MAX_VALUE);
-		test(list);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+		String compare = br.readLine();
+		String target = br.readLine();
+
+		boolean isContain = KMP(compare, target);
+
+		int result = isContain ? 1 : 0;
+
+		bw.write(String.valueOf(result));
+		bw.flush();
+		bw.close();
 	}
 
-	static public void test(List<?> list){
-		for(Object o : list){
-			System.out.println(o);
+	static boolean KMP(String compare, String target){
+		int[] table = makeTable(target);
+
+		int compareSize = compare.length();
+		int targetSize = target.length();
+		int j=0;
+
+		for(int i=0;i<compareSize;i++){
+			while(j>0 && target.charAt(j) != compare.charAt(i)){
+				j = table[j-1];
+			}
+
+			if(target.charAt(j) == compare.charAt(i)){
+				if(j == targetSize-1) return true;
+				j++;
+			}
 		}
+		return false;
 	}
 
-	static void printCollection(Collection<? super MyParent> c){
-		for(Object p : c){
-			System.out.println(p);
-		}
-	}
+	static int[] makeTable(String target){
+		int targetSize = target.length();
+		int[] table = new int[targetSize];
 
-	static void setCollection(Collection<? super MyParent> c){
-		c.add(new MyChild(1));
-		c.add(new MyParent(2));
-	}
+		int j = 0;
+		for(int i=1;i<targetSize;i++){
+			while(j>0 && target.charAt(j) != target.charAt(i)){
+				j = table[j-1];
+			}
 
-	static class MyGrandParent{
-		public int id;
-		public MyGrandParent(int id){
-			this.id = id;
+			if(target.charAt(j) == target.charAt(i)){
+				table[i] = ++j;
+			}
 		}
-	}
-	static class MyParent extends MyGrandParent{
-		public int id;
-		public MyParent(int id) {
-			super(id);
-			this.id = id;
-		}
-	}
 
-	static class MyChild extends MyParent{
-		public int id;
-		public MyChild(int id) {
-			super(id);
-			this.id = id;
-		}
+		return table;
 	}
 }
