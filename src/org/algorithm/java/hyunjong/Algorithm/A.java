@@ -33,58 +33,52 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
-public class A {
+import java.io.*;
+import java.util.StringTokenizer;
+public class A{
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		String compare = br.readLine();
-		String target = br.readLine();
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		int N = Integer.parseInt(st.nextToken());
+		long M = Long.parseLong(st.nextToken());
 
-		boolean isContain = KMP(compare, target);
+		st = new StringTokenizer(br.readLine()," ");
+		long[] woods = new long[N];
+		long maxLength = 0;
+		for(int i=0;i<N;i++){
+			woods[i] = Long.parseLong(st.nextToken());
+			maxLength = Math.max(maxLength, woods[i]);
+		}
 
-		int result = isContain ? 1 : 0;
+		long start = 0;
+		long end = maxLength;
 
-		bw.write(String.valueOf(result));
+		while(start<end){
+			long mid = (start+end)/2;
+
+			long totalLength = cutWood(woods, mid);
+
+			if(totalLength >= M){
+				start = mid+1;
+			}else{
+				end = mid;
+			}
+		}
+
+		bw.write(String.valueOf(end-1));
 		bw.flush();
 		bw.close();
 	}
 
-	static boolean KMP(String compare, String target){
-		int[] table = makeTable(target);
-
-		int compareSize = compare.length();
-		int targetSize = target.length();
-		int j=0;
-
-		for(int i=0;i<compareSize;i++){
-			while(j>0 && target.charAt(j) != compare.charAt(i)){
-				j = table[j-1];
-			}
-
-			if(target.charAt(j) == compare.charAt(i)){
-				if(j == targetSize-1) return true;
-				j++;
+	static long cutWood(long[] woods, long mid){
+		long total = 0;
+		for(int i=0;i<woods.length;i++){
+			if(woods[i] >= mid){
+				total += woods[i]-mid;
 			}
 		}
-		return false;
-	}
-
-	static int[] makeTable(String target){
-		int targetSize = target.length();
-		int[] table = new int[targetSize];
-
-		int j = 0;
-		for(int i=1;i<targetSize;i++){
-			while(j>0 && target.charAt(j) != target.charAt(i)){
-				j = table[j-1];
-			}
-
-			if(target.charAt(j) == target.charAt(i)){
-				table[i] = ++j;
-			}
-		}
-
-		return table;
+		return total;
 	}
 }
