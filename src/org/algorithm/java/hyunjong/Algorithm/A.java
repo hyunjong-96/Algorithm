@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -35,50 +36,48 @@ import java.util.stream.IntStream;
 
 import java.io.*;
 import java.util.StringTokenizer;
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collections;
 public class A{
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		int N = Integer.parseInt(st.nextToken());
-		long M = Long.parseLong(st.nextToken());
+		int N = Integer.parseInt(br.readLine());
 
-		st = new StringTokenizer(br.readLine()," ");
-		long[] woods = new long[N];
-		long maxLength = 0;
-		for(int i=0;i<N;i++){
-			woods[i] = Long.parseLong(st.nextToken());
-			maxLength = Math.max(maxLength, woods[i]);
-		}
-
-		long start = 0;
-		long end = maxLength;
-
-		while(start<end){
-			long mid = (start+end)/2;
-
-			long totalLength = cutWood(woods, mid);
-
-			if(totalLength >= M){
-				start = mid+1;
-			}else{
-				end = mid;
+		StringBuilder sb = new StringBuilder();
+		while(N-- > 0){
+			StringTokenizer st = new StringTokenizer(br.readLine()," ");
+			int n = Integer.parseInt(st.nextToken());
+			int[] nums = new int[n];
+			for(int i=0;i<n;i++){
+				nums[i] = Integer.parseInt(st.nextToken());
 			}
+			Arrays.sort(nums);
+			int sum = 0;
+			for(int i=nums.length-1;i>0;i--){
+				for(int j=i-1;j>=0;j--){
+					sum += gcd(nums[i],nums[j]);
+				}
+			}
+			sb.append(sum).append("\n");
 		}
 
-		bw.write(String.valueOf(end-1));
+		bw.write(sb.toString());
 		bw.flush();
 		bw.close();
 	}
 
-	static long cutWood(long[] woods, long mid){
-		long total = 0;
-		for(int i=0;i<woods.length;i++){
-			if(woods[i] >= mid){
-				total += woods[i]-mid;
-			}
+	static int gcd(int a, int b){
+		while(b!=0){
+			int tmp = a%b;
+			a = b;
+			b = tmp;
 		}
-		return total;
+		return a;
+		// if(b==0) return a;
+		// if(a%b==0) return b;
+		// return gcd(b,a%b);
 	}
 }
