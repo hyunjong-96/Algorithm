@@ -1,6 +1,8 @@
 package org.algorithm.java.hyunjong.Algorithm.BOJ.그래프.다익스트라;
 
 import java.io.*;
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.StringTokenizer;
 import java.util.List;
 import java.util.ArrayList;
@@ -44,9 +46,10 @@ public class 케빈베이컨의6단계법칙_다잌 {
 	static int dijkstra(List<Integer>[] relation, int start, int N) {
 		int totalKavinBakun = 0;
 		boolean[] check = new boolean[N + 1];
-		PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
-			return o1[1] - o2[1];
-		});
+		// PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
+		// 	return o1[1] - o2[1];
+		// });
+		Queue<int[]> pq = new ArrayDeque<>();
 
 		pq.offer(new int[] {start, 0});
 
