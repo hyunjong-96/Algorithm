@@ -1,82 +1,32 @@
 package org.algorithm.java.hyunjong.Algorithm;
 
 import java.io.*;
-import java.util.LinkedList;
-import java.util.StringTokenizer;
+import java.util.Stack;
 public class A{
 	public static void main(String[] args) throws IOException{
-		Client client = new Client();
-		client.talk();
-	}
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-	public interface Command{
-		void run();
-	}
+		StringBuilder sb = new StringBuilder();
+		while(true){
+			String text = br.readLine();
+			if(text.equals(".")) break;
+			text = text.replaceAll("[a-z A-Z ]","");
+			Stack<Character> stack = new Stack<>();
+			for(int i=0;i<text.length()-1;i++){
+				char c = text.charAt(i);
 
-	static public class HeaterCommand implements Command{
-		Heater heater;
-		void setHeater(Heater heater){
-			this.heater = heater;
-		}
-		@Override
-		public void run() {
-			this.heater.powerOn();
-		}
-	}
 
-	static public class Heater{
-		public void powerOn(){
-			System.out.println("히터 켜기!");
-		}
-	}
-
-	static public class LampCommand implements Command{
-		Lamp lamp;
-
-		void setLamp(Lamp lamp){
-			this.lamp = lamp;
-		}
-		@Override
-		public void run() {
-			this.lamp.turnOn();
-		}
-	}
-
-	static public class Lamp{
-		public void turnOn(){
-			System.out.println("램프 켜기!");
-		}
-	}
-
-	static public class Genie{
-		Command command;
-
-		public void setCommand(Command command){
-			this.command = command;
+				if(!stack.isEmpty() && ((c==']' && stack.peek()=='[') || (c==')' && stack.peek()=='('))){
+					stack.pop();
+				}else stack.push(c);
+			}
+			String answer = stack.isEmpty() ? "yes" : "no";
+			sb.append(answer).append("\n");
 		}
 
-		public void talk(){
-			this.command.run();
-		}
-	}
-
-	static public class Client{
-		public void talk(){
-			Genie genie = new Genie();
-
-			HeaterCommand heaterCommand = new HeaterCommand();
-			Heater heater = new Heater();
-			heaterCommand.setHeater(heater);
-
-			genie.setCommand(heaterCommand);
-			genie.talk();
-
-			LampCommand lampCommand = new LampCommand();
-			Lamp lamp = new Lamp();
-			lampCommand.setLamp(lamp);
-
-			genie.setCommand(lampCommand);
-			genie.talk();
-		}
+		bw.write(sb.toString());
+		bw.flush();
+		bw.close();
 	}
 }
