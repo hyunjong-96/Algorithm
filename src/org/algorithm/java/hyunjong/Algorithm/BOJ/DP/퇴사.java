@@ -1,8 +1,8 @@
-package org.algorithm.java.hyunjong.Algorithm;
+package org.algorithm.java.hyunjong.Algorithm.BOJ.DP;
 
 import java.io.*;
 import java.util.StringTokenizer;
-public class A{
+public class 퇴사{
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
