@@ -1,4 +1,4 @@
-package org.algorithm.java.hyunjong.Algorithm.BOJ.구현;
+package org.algorithm.java.hyunjong.Algorithm.프로그래머스.구현;
 
 public class 행렬의곱셈 {
 	public static void main(String[] args) {
