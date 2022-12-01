@@ -1,32 +1,57 @@
 package org.algorithm.java.hyunjong.Algorithm;
-
 import java.io.*;
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.StringTokenizer;
 public class A{
+	static int[] dy = {-1,0,1,0};
+	static int[] dx = {0,-1,0,1};
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		int N = Integer.parseInt(br.readLine());
-		int[] T = new int[N+1];
-		int[] P = new int[N+1];
-		for(int i=1;i<=N;i++){
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			T[i] = Integer.parseInt(st.nextToken());
-			P[i] = Integer.parseInt(st.nextToken());
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		int[][] map = new int[N][M];
 
-		}
-		int[] dp = new int[N+2];
-
-		for(int i=N;i>0;i--){
-			if(i+T[i] > N+1) dp[i] = dp[i+1];
-			else{
-				dp[i] = Math.max(dp[i+T[i]]+P[i], dp[i+1]);
+		for(int i=0;i<N;i++){
+			String[] row = br.readLine().split("");
+			for(int j=0;j<M;j++){
+				map[i][j] = Integer.parseInt(row[j]);
 			}
 		}
 
-		bw.write(String.valueOf(dp[1]));
+		int answer = bfs(map, N, M);
+
+		bw.write(String.valueOf(answer));
 		bw.flush();
 		bw.close();
+	}
+
+	static int bfs(int[][] map, int N, int M){
+		//0:y 1:x 2:d
+		Queue<int[]> queue = new LinkedList<>();
+		// boolean[][] check = new boolean[N][M];
+
+		queue.offer(new int[]{0,0,1});
+		map[0][0] = -1;
+
+		while(!queue.isEmpty()){
+			int[] current = queue.poll();
+			if(current[0]==N-1 && current[1]==M-1) return current[2];
+
+			// check[current[0]][current[1]]=true;
+
+			for(int i=0;i<4;i++){
+				int ny = current[0]+dy[i];
+				int nx = current[1]+dx[i];
+				if(ny>=0&&nx>=0&&ny<N&&nx<M&&map[ny][nx]==1){
+					queue.offer(new int[]{ny,nx,current[2]+1});
+					map[ny][nx] = -1;
+				}
+			}
+		}
+		return -1;
 	}
 }
