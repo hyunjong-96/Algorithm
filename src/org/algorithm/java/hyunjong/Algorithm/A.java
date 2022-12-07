@@ -1,32 +1,35 @@
 package org.algorithm.java.hyunjong.Algorithm;
 import java.io.*;
+import java.util.HashSet;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Set;
 import java.util.StringTokenizer;
 public class A{
 	static int[] dy = {-1,0,1,0};
 	static int[] dx = {0,-1,0,1};
 	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		Set<Integer> set = new HashSet<>();
+		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
-		int[][] map = new int[N][M];
+		// StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		// int N = Integer.parseInt(st.nextToken());
+		// int M = Integer.parseInt(st.nextToken());
+		// int[][] map = new int[N][M];
+		//
+		// for(int i=0;i<N;i++){
+		// 	String[] row = br.readLine().split("");
+		// 	for(int j=0;j<M;j++){
+		// 		map[i][j] = Integer.parseInt(row[j]);
+		// 	}
+		// }
+		//
+		// int answer = bfs(map, N, M);
 
-		for(int i=0;i<N;i++){
-			String[] row = br.readLine().split("");
-			for(int j=0;j<M;j++){
-				map[i][j] = Integer.parseInt(row[j]);
-			}
-		}
-
-		int answer = bfs(map, N, M);
-
-		bw.write(String.valueOf(answer));
-		bw.flush();
-		bw.close();
+		// bw.write(String.valueOf(answer));
+		// bw.flush();
+		// bw.close();
 	}
 
 	static int bfs(int[][] map, int N, int M){
