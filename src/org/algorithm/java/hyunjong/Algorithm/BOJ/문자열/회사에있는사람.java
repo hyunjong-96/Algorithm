@@ -19,7 +19,7 @@ public class 회사에있는사람 {
 		for(int i=0;i<N;i++){
 			String[] log = br.readLine().split(" ");
 
-			if(log[1].equals("enter")){
+			if(log[1].equals("e람nter")){
 				map.put(log[0],true);
 			}else{
 				map.remove(log[0]);
