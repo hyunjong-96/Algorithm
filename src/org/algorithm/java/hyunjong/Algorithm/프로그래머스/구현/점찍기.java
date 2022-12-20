@@ -18,21 +18,22 @@ public class 점찍기 {
 		}
 		return answer;
 	}
-	// static public long solution(int k, int d) {
-	// 	int a = 0;
-	// 	while(k*a <= d){
-	// 		a++;
-	// 	}
-	//
-	// 	long answer = 0;
-	// 	a--;
-	// 	int y = a*k;
-	// 	for(int i=0;i<=y;i+=k){
-	// 		while(Math.pow(i,2)+Math.pow(a*k,2) > Math.pow(d,2)){
-	// 			a--;
-	// 		}
-	// 		answer += (a+1);
-	// 	}
-	// 	return answer;
-	// }
+
 }
+// static public long solution(int k, int d) {
+// 	int a = 0;
+// 	while(k*a <= d){
+// 		a++;
+// 	}
+//
+// 	long answer = 0;
+// 	a--;
+// 	int y = a*k;
+// 	for(int i=0;i<=y;i+=k){
+// 		while(Math.pow(i,2)+Math.pow(a*k,2) > Math.pow(d,2)){
+// 			a--;
+// 		}
+// 		answer += (a+1);
+// 	}
+// 	return answer;
+// }
