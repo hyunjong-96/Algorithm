@@ -38,118 +38,42 @@ public class EASY_2048_RE {
 			return;
 		}
 
-		int[][] upMap = moveUp(map);
-		move(upMap, depth + 1);
-
-		int[][] downMap = moveDown(map);
-		move(downMap, depth + 1);
-
-		int[][] leftMap = moveLeft(map);
-		move(leftMap, depth + 1);
-
-		int[][] rightMap = moveRight(map);
-		move(rightMap, depth + 1);
-
+		for(int i=0;i<4;i++){
+			map = turn(map);
+			int[][] moveMap = moveOfDir(map);
+			move(moveMap, depth+1);
+		}
 	}
 
-	static int[][] moveUp(int[][] map) {
-
+	static int[][] turn(int[][] map){
 		int[][] newMap = new int[N][N];
 
-		for (int x = 0; x < N; x++) {
-			Deque<Block> dq = new ArrayDeque<>();
-			for (int y = 0; y < N; y++) {
+		for(int y=0;y<N;y++){
+			for(int x=0;x<N;x++){
+				newMap[y][x] = map[x][N-1-y];
+			}
+		}
 
-				// int inValue = map[y][x];
+		return newMap;
+	}
 
-				// while(!dq.isEmpty() && dq.peekLast() == inValue){
-				// 	dq.pollLast();
-				// 	inValue *= 2;
-				// }
-				// dq.offerLast(inValue);
-				if (!dq.isEmpty() && map[y][x] != 0 && dq.peekLast().num == map[y][x] && !dq.peekLast().crash) {
+	static int[][] moveOfDir(int[][] map){
+		int[][] newMap = new int[N][N];
+
+		for(int x=0;x<N;x++){
+			Deque<Block> dq = new ArrayDeque();
+			for(int y=0;y<N;y++){
+				if(!dq.isEmpty() && map[y][x] != 0 && dq.peekLast().num == map[y][x] && !dq.peekLast().crash){
 					dq.pollLast();
-					dq.offerLast(new Block(map[y][x] * 2, true));
-				} else if(map[y][x] != 0){
+					dq.offerLast(new Block(map[y][x]*2, true));
+				}else if(map[y][x] != 0){
 					dq.offerLast(new Block(map[y][x], false));
 				}
 			}
 
-			int y = 0;
-			while (!dq.isEmpty()) {
+			int y=0;
+			while(!dq.isEmpty()){
 				newMap[y++][x] = dq.pollFirst().num;
-			}
-		}
-
-		return newMap;
-	}
-
-	static int[][] moveDown(int[][] map) {
-
-		int[][] newMap = new int[N][N];
-
-		for (int x = 0; x < N; x++) {
-			Deque<Block> dq = new ArrayDeque<>();
-			for (int y = N - 1; y >= 0; y--) {
-				if (!dq.isEmpty() && map[y][x] != 0 && dq.peekLast().num == map[y][x] && !dq.peekLast().crash) {
-					dq.pollLast();
-					dq.offerLast(new Block(map[y][x] * 2, true));
-				} else if(map[y][x] != 0){
-					dq.offerLast(new Block(map[y][x], false));
-				}
-			}
-
-			int y = N - 1 ;
-			while (!dq.isEmpty()) {
-				newMap[y--][x] = dq.pollFirst().num;
-			}
-		}
-
-		return newMap;
-	}
-
-	static int[][] moveLeft(int[][] map) {
-
-		int[][] newMap = new int[N][N];
-
-		for (int y = 0; y < N; y++) {
-			Deque<Block> dq = new ArrayDeque<>();
-			for (int x = 0; x < N; x++) {
-				if (!dq.isEmpty() && map[y][x] != 0 && dq.peekLast().num == map[y][x] && !dq.peekLast().crash) {
-					dq.pollLast();
-					dq.offerLast(new Block(map[y][x] * 2, true));
-				} else if(map[y][x] != 0){
-					dq.offerLast(new Block(map[y][x], false));
-				}
-			}
-
-			int x = 0;
-			while (!dq.isEmpty()) {
-				newMap[y][x++] = dq.pollFirst().num;
-			}
-		}
-
-		return newMap;
-	}
-
-	static int[][] moveRight(int[][] map) {
-
-		int[][] newMap = new int[N][N];
-
-		for (int y = 0; y < N; y++) {
-			Deque<Block> dq = new ArrayDeque<>();
-			for (int x = N - 1; x >= 0; x--) {
-				if (!dq.isEmpty() && map[y][x] != 0 && dq.peekLast().num == map[y][x] && !dq.peekLast().crash) {
-					dq.pollLast();
-					dq.offerLast(new Block(map[y][x] * 2, true));
-				} else if(map[y][x] != 0){
-					dq.offerLast(new Block(map[y][x], false));
-				}
-			}
-
-			int x = N - 1;
-			while (!dq.isEmpty()) {
-				newMap[y][x--] = dq.pollFirst().num;
 			}
 		}
 
@@ -176,3 +100,4 @@ public class EASY_2048_RE {
 		}
 	}
 }
+
