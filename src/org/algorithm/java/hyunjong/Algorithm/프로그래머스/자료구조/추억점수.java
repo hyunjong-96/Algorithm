@@ -22,7 +22,7 @@ public class 추억점수 {
         int[] answer = new int[photo.length];
         for(int i =0 ; i<photo.length;i++) {
             String[] p = photo[i];
-            int sum = 0;수
+            int sum = 0;
 
             for(String n : p) {
                 sum += map.getOrDefault(n, 0);
