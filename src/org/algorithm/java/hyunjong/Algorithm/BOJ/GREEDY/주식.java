@@ -18,29 +18,28 @@ public class 주식 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		int T = Integer.parseInt(br.readLine());
-
 		StringBuilder sb = new StringBuilder();
-		while (T-- > 0) {
+		while(T-- > 0) {
 			int N = Integer.parseInt(br.readLine());
 
-			int[] graph = new int[N];
+			int[] chart = new int[N];
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
 			for(int i=0;i<N;i++){
-				graph[i] = Integer.parseInt(st.nextToken());
+				chart[i] = Integer.parseInt(st.nextToken());
 			}
 
-			long answer = 0;
-
+			long result = 0;
 			int max = 0;
-			for(int i=graph.length-1;i>=0;i--){
-				if(graph[i] > max) max = graph[i];
-				else{
-					answer += max - graph[i];
+			for(int i=N-1;i>=0;i--) {
+				if(max < chart[i]) {
+					max = chart[i];
+					continue;
 				}
-			}
 
-			sb.append(answer);
-			sb.append("\n");
+				result += max - chart[i];
+			}
+			sb.append(result).append("\n");
 		}
 
 		bw.write(sb.toString());
